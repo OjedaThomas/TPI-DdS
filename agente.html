@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="es>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/agente.css">
+    <link rel="stylesheet" href="css/agenteAgenda.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Inmobiliaria Domus</title>
+</head>
+<body>
+    <!-- <div class="margin">
+
+    </div>
+    <section class="menu">
+        <button data-target="#inicio">Inicio</button>
+        <button data-target="#agenda">Agenda</button>
+        <button data-target="#propiedades">Propiedades</button>
+    </section>
+    <section class="content">
+        <article data-content id="inicio" class="active">
+            <div class="contenido">
+                <h1>Bienvenido</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ullam maxime quis nobis iusto distinctio maiores debitis corporis. Eaque, est! Dolore veniam nihil quasi quisquam obcaecati aliquid sint assumenda nesciunt!
+                </p>
+            </div>
+        </article>
+        <article data-content id="agenda">
+            <div class="contenido">
+                <h2>Agenda</h2>
+            </div>
+        </article>
+        <article data-content id="propiedades">
+            <div class="contenido">
+                <h2>Propiedades</h2>
+            </div>
+        </article>
+    </section> -->
+      <button class="btn btn-secondary btn-outline-dark" type="button" id="boton" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M3 6.25a.75.75 0 01.75-.75h13.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.25zM3.75 11a.75.75 0 01.75.75v7a.75.75 0 01-1.5 0v-7a.75.75 0 01.75-.75zM8 12.313a.75.75 0 01.75-.75h11.5a.75.75 0 010 1.5H8.75a.75.75 0 01-.75-.75zm0 5.937a.75.75 0 01.75-.75h11.5a.75.75 0 010 1.5H8.75a.75.75 0 01-.75-.75z"></path></svg></button>
+
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel" style="font-size:3rem">Agente</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+        <div class="offcanvas-body">
+          <a class="link-canvas"href="#perfil">Perfil</a>
+          <br>
+          <a class="link-canvas" href="#login.html">Cerrar Sesión</a>
+        </div>
+      </div>
+    <div class="mytabs">
+    
+        <input type="radio" id="tabagenda" name="mytabs" checked>
+        <label for="tabagenda" class="label-tab">Agenda</label>
+        <div class="tab" id="tab-agenda">
+          <nav class="butons">
+            <button type="button" class="btn btn-secondary btn-outline-dark previus"><-</button>
+            <h3>Junio</h3>
+            <button type="button" class="btn btn-secondary btn-outline-dark next">-></button>
+          </nav>
+          <section class="calendar">
+            <ol class="calendar-ol">
+              <li class="day-name">Lunes</li>
+              <li class="day-name">Martes</li>
+              <li class="day-name">Miercoles</li>
+              <li class="day-name">Jueves</li>
+              <li class="day-name">Viernes</li>
+              <li class="day-name">Sabado</li>
+              <li class="day-name">Domingo</li>
+              <li class="days first-day">
+                <input type="radio">
+                <label for="" class="label-calendar" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">1</label>
+              </li>
+              <li class="days">
+                <input type="radio">
+                <label for="" class="label-calendar" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">2</label>
+              </li>
+              <li class="days">
+                <input type="radio">
+                <label for="" class="label-calendar" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">3</label>
+              </li>
+              <li class="days">
+                <input type="radio">
+                <label for="" class="label-calendar" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">4</label>
+              </li>
+              <li class="days">
+                <input type="radio">
+                <label for="" class="label-calendar" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">5</label>
+              </li>
+              <li class="days">
+                <input type="radio">
+                <label for="" class="label-calendar" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">6</label>
+              </li>
+              <li class="days">
+                <input type="radio">
+                <label for="" class="label-calendar" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">7</label>
+              </li>
+              <li class="days">
+                <input type="radio">
+                <label for="" class="label-calendar" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">8</label>
+              </li>
+              <li class="days">
+                <input type="radio">
+                <label for="" class="label-calendar" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">9</label>
+              </li>
+              <li class="days">
+                <input type="radio">
+                <label for="" class="label-calendar" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">10</label>
+                </li>
+              <li class="days">
+                <input type="radio">
+                <label for="" class="label-calendar" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">11</label>
+                </li>
+              <li class="days">
+                <input type="radio">
+                <label for="" class="label-calendar" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">12</label>
+                </li>
+              <li class="days">
+                <input type="radio">
+                <label for="" class="label-calendar" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">13</label>
+                </li>
+              <li class="days">
+                <input type="radio">
+                <label for="" class="label-calendar" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">14</label>
+                </li>
+              <li class="days">
+                <input type="radio">
+                <label for="" class="label-calendar" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">15</label>
+                </li>
+              <li class="days">
+                <input type="radio">
+                <label for="" class="label-calendar" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">16</label>
+                </li>
+              <li class="days">
+                <input type="radio">
+                <label for="" class="label-calendar" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">17</label>
+                </li>
+              <li class="days">
+                <input type="radio">
+                <label for="" class="label-calendar" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">18</label>
+                </li>
+              <li class="days">
+                <input type="radio">
+                <label for="" class="label-calendar" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">19</label>
+                </li>
+              <li class="days">
+                <input type="radio">
+                <label for="" class="label-calendar" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">20</label>
+                </li>
+              <li class="days">
+                <input type="radio">
+                <label for="" class="label-calendar" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">21</label>
+                </li>
+              <li class="days">
+                <input type="radio">
+                <label for="" class="label-calendar" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">22</label>
+                </li>
+              <li class="days">
+                <input type="radio">
+                <label for="" class="label-calendar" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">23</label>
+                </li>
+              <li class="days">
+                <input type="radio">
+                <label for="" class="label-calendar" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">24</label>
+                </li>
+              <li class="days">
+                <input type="radio">
+                <label for="" class="label-calendar" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">25</label>
+                </li>
+              <li class="days">
+                <input type="radio">
+                <label for="" class="label-calendar" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">26</label>
+                </li>
+              <li class="days">
+                <input type="radio">
+                <label for="" class="label-calendar" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">27</label>
+                </li>
+              <li class="days">
+                <input type="radio">
+                <label for="" class="label-calendar" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">28</label>
+                </li>
+              <li class="days">
+                <input type="radio">
+                <label for="" class="label-calendar" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">29</label>
+              </li>
+              <li class="days">
+                <input type="radio">
+                <label for="" class="label-calendar" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">30</label>
+                </li>
+            </ol>
+            <article class="collapse-right collapse" id="collapseExample">
+              <div class="card card-body" id="colapsado">
+                <div class="main">
+                  <div class="tabla">  
+                    <table class="center">
+                    <tr class="datos">
+                        <th>Nombre</th>
+                        <th>Telefono</th>
+                        <th>Correo</th>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Estado</th>			    
+                    </tr>
+                    <tr class="datos">
+                        <td>Alguien</td>
+                        <td>12345678</td>
+                        <td>ejemplo@mail.com</td>
+                        <td>dia-mes-anio</td>
+                        <td>00:00 HS </td>
+                        <td>
+                          <div class="estado">
+                            <select>
+                              <option value="0"></option>
+                              <option value="1">Pendiente</option>
+                              <option value="2">Finalizada</option>
+                              <option value="3">Cancelada</option>
+                            </select>
+                        </div>
+                      </td>
+                    </tr>
+                     <tr class="datos">
+                        <td>Alguien</td>
+                        <td>12345678</td>
+                        <td>ejemplo@mail.com</td>
+                        <td>dia-mes-anio</td>
+                         <td>00:00 HS </td>
+                        <td>
+                          <div class="estado">
+                            <select>
+                            <option value="0"></option>
+                            <option value="1">Pendiente</option>
+                            <option value="2">Finalizada</option>
+                            <option value="3">Cancelada</option>
+                            </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="datos">
+                        <td>Alguien</td>
+                        <td>12345678</td>
+                        <td>ejemplo@mail.com</td>
+                        <td>dia-mes-anio</td>
+                         <td>00:00 HS </td>
+                        <td>
+                          <div class="estado">
+                            <select>
+                            <option value="0"></option>
+                            <option value="1">Pendiente</option>
+                            <option value="2">Finalizada</option>
+                            <option value="3">Cancelada</option>
+                            </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="datos">
+                        <td>Alguien</td>
+                        <td>12345678</td>
+                        <td>ejemplo@mail.com</td>
+                        <td>dia-mes-anio</td>
+                         <td>00:00 HS </td>
+                        <td>
+                          <div class="estado">
+                            <select>
+                            <option value="0"></option>
+                            <option value="1">Pendiente</option>
+                            <option value="2">Finalizada</option>
+                            <option value="3">Cancelada</option>
+                            </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="datos">
+                        <td>Alguien</td>
+                        <td>12345678</td>
+                        <td>ejemplo@mail.com</td>
+                        <td>dia-mes-anio</td>
+                         <td>00:00 HS </td>
+                        <td>
+                          <div class="estado">
+                            <select>
+                            <option value="0"></option>
+                            <option value="1">Pendiente</option>
+                            <option value="2">Finalizada</option>
+                            <option value="3">Cancelada</option>
+                            </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="datos">
+                        <td>Alguien</td>
+                        <td>12345678</td>
+                        <td>ejemplo@mail.com</td>
+                        <td>dia-mes-anio</td>
+                         <td>00:00 HS </td>
+                        <td>
+                          <div class="estado">
+                            <select>
+                            <option value="0"></option>
+                            <option value="1">Pendiente</option>
+                            <option value="2">Finalizada</option>
+                            <option value="3">Cancelada</option>
+                            </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="datos">
+                        <td>Alguien</td>
+                        <td>12345678</td>
+                        <td>ejemplo@mail.com</td>
+                        <td>dia-mes-anio</td>
+                         <td>00:00 HS </td>
+                        <td>
+                          <div class="estado">
+                            <select>
+                            <option value="0"></option>
+                            <option value="1">Pendiente</option>
+                            <option value="2">Finalizada</option>
+                            <option value="3">Cancelada</option>
+                            </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="datos">
+                        <td>Alguien</td>
+                        <td>12345678</td>
+                        <td>ejemplo@mail.com</td>
+                        <td>dia-mes-anio</td>
+                         <td>00:00 HS </td>
+                        <td>
+                          <div class="estado">
+                            <select>
+                            <option value="0"></option>
+                            <option value="1">Pendiente</option>
+                            <option value="2">Finalizada</option>
+                            <option value="3">Cancelada</option>
+                            </select>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <div class="modal fade bg-secondary" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-l">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    hola
+                </div>
+                <!-- <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div> -->
+              </div>
+            </div>
+        </div>
+          
+        </div>
+    
+        <input type="radio" id="tabproperty" name="mytabs">
+        <label for="tabproperty" class="label-tab">Propiedades</label>
+        <div class="tab">
+            <section class="grid-propertys">
+              <div class="card bg-secondary border-dark" style="width: 18rem;">
+                    <img src="assets/04-4-768x536.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">ID PROPIEDAD: 234234</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <button type="button" class="btn btn-secondary btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        + DETALLES
+                    </button>
+                    </div>
+                </div>
+                <div class="card bg-secondary border-dark" style="width: 18rem;">
+                    <img src="assets/16158875126483.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">ID PROPIEDAD: 653017</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <button type="button" class="btn btn-secondary btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        + DETALLES
+                    </button>
+                    </div>
+                </div>
+                <div class="card bg-secondary border-dark" style="width: 18rem;">
+                    <img src="assets/2572104_0.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">ID PROPIEDAD: 635970</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <button type="button" class="btn btn-secondary btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        + DETALLES
+                    </button>
+                    </div>
+                </div>
+                <div class="card bg-secondary border-dark" style="width: 18rem;">
+                    <img src="assets/7f5cd67173d9a4cb19d2c0dbb126ccde.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">ID PROPIEDAD: 639814</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <button type="button" class="btn btn-secondary btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        + DETALLES
+                    </button>
+                    </div>
+                </div>
+                <div class="card bg-secondary border-dark" style="width: 18rem;">
+                    <img src="assets/casas-ecológicas_apertura-hogar-sostenibilidad-certificado--1024x629.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">ID PROPIEDAD: 634798</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <button type="button" class="btn btn-secondary btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        + DETALLES
+                    </button>
+                    </div>
+                </div>
+                <div class="card bg-secondary border-dark" style="width: 18rem;">
+                    <img src="assets/VMP7D7JF2BFKPLHOBL3WDBPNZY.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">ID PROPIEDAD: 635840</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <button type="button" class="btn btn-secondary btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        + DETALLES
+                    </button>
+                    </div>
+                </div>
+                <div class="card bg-secondary border-dark" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">ID PROPIEDAD: 253047</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <button type="button" class="btn btn-secondary btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        + DETALLES
+                    </button>
+                    </div>
+                </div>
+                <div class="card bg-secondary border-dark" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">ID PROPIEDAD: 365498</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <button type="button" class="btn btn-secondary btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        + DETALLES
+                    </button>
+                    </div>
+                </div>
+                <div class="card bg-secondary border-dark" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">ID PROPIEDAD: 658712</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <button type="button" class="btn btn-secondary btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        + DETALLES
+                    </button>
+                    </div>
+                </div>
+                <div class="card bg-secondary border-dark" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">ID PROPIEDAD: 954821</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <button type="button" class="btn btn-secondary btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        + DETALLES
+                    </button>
+                    </div>
+                </div>
+                <div class="card bg-secondary border-dark" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">ID PROPIEDAD: 153287</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <button type="button" class="btn btn-secondary btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        + DETALLES
+                    </button>
+                    </div>
+                </div>
+                <div class="card bg-secondary border-dark" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">ID PROPIEDAD: 651484</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <button type="button" class="btn btn-secondary btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        + DETALLES
+                    </button>
+                    </div>
+              </div>
+            </section>
+            <div class="modal fade bg-secondary" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">ID PROPIEDAD: 659840</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img src="assets/04-4-768x536.jpg" class="d-block w-100" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="assets/16158875126483.jpg" class="d-block w-100" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="assets/2572104_0.jpg" class="d-block w-100" alt="...">
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div class="container-fluid h-100 w-100">
+                          <div class="d-flex row m-3">
+                              <h4>Propiedad</h4>
+                              <div class="col-2">
+                                  
+                              </div>
+                              <div class="col-8 mt-3 mb-5">
+                                  <form class="is-readonly row g-3">
+                                      <div class="col-md-6">
+                                          <label for="autoSizingSelect" class="form-label">Tipo</label>
+                                          <label class="visually-hidden" for="autoSizingSelect">Tipo</label>
+                                          <select class="form-select" id="autoSizingSelect">
+                                            <option selected>Seleccionar</option>
+                                            <option value="1">Venta</option>
+                                            <option value="2">Alquiler</option>
+                                            <option value="3">Compra</option>
+                                          </select>
+                                      </div>
+                                      <div class="col-md-6">
+                                        <label for="inputPassword4" class="form-label">Ubicacion</label>
+                                        <input type="Ubicacion" class="form-control" id="inputPassword4">
+                                      </div>
+                                      <div class="col-3">
+                                        <label for="inputAddress" class="form-label">Baños</label>
+                                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                      </div>
+                                      <div class="col-3">
+                                          <label for="inputAddress" class="form-label">Antiguedad</label>
+                                          <input type="text" class="form-control" id="inputAddress" placeholder="Antiguedad">
+                                        </div>
+                                        <div class="col-3">
+                                          <label for="inputAddress" class="form-label">Dormitorios</label>
+                                          <input type="text" class="form-control" id="inputAddress" placeholder="Dormitorios">
+                                        </div>
+                                        <div class="col-3">
+                                          <label for="inputAddress" class="form-label">Suites</label>
+                                          <input type="text" class="form-control" id="inputAddress" placeholder="Suites">
+                                        </div>
+                                      <div class="col-6">
+                                        <label for="inputAddress2" class="form-label">Espacios</label>
+                                        <input type="text" class="form-control" id="inputAddress2" placeholder="Espacios">
+                                      </div>
+                                      <div class="col-6">
+                                          <label for="inputAddress2" class="form-label">Artefactos</label>
+                                          <input type="text" class="form-control" id="inputAddress2" placeholder="Artefactos">
+                                        </div>
+                                      <div class="col-md-6">
+                                        <label for="inputCity" class="form-label">Servicios</label>
+                                        <input type="text" class="form-control" id="Servicios">
+                                      </div>
+                                      <div class="col-md-6">
+                                        <label for="inputState" class="form-label">Contrato</label>
+                                        <select id="inputState" class="form-select">
+                                          <option selected>Seleccionar</option>
+                                          <option>...</option>
+                                        </select>
+                                      </div>
+                                      <div class="mb-3">
+                                          <label for="formFileMultiple" class="form-label">Cargar Imagenes</label>
+                                          <input class="form-control" type="file" id="formFileMultiple" multiple>
+                                        </div>
+                                      <div class="">
+                                          <label for="exampleFormControlTextarea1" class="form-label">Descripcion</label>
+                                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Añade una descripcion"></textarea>
+                                      </div>
+                                      <div class="col-6">
+                                          <label for="inputAddress2" class="form-label">Id Propietario</label>
+                                          <input type="text" class="form-control" id="inputAddress2" placeholder="Id Propietario">
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="inputAddress2" class="form-label">Precio</label>
+                                            <input type="text" class="form-control" id="inputAddress2" placeholder="Precio">
+                                          </div>
+                                          <div class="row justify-content-end mt-5">
+                                              <div class="col-2">
+                                                <button type="button" class="btn btn-secondary  btn-outline-dark btn-edit js-edit">Edit</button>
+                                                <button type="button" class="btn btn-secondary  btn-outline-dark btn-save js-save">Save</button>
+                                              </div>
+                                              <div class="col-2 ">
+                                                  <button type="button" class="btn btn-secondary btn-outline-dark" data-bs-dismiss="modal">Cancelar</button>
+                                              </div>
+                                          </div>
+                                    </form>
+                              </div>
+                              <div class="col-2">
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                    <!-- <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div> -->
+                  </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    <script src="js/agente.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
