@@ -16,8 +16,8 @@ body {
     background: #c4c4c4;
     margin: 0;
     padding: 0;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
 }
 
 /* NAVBAR */
