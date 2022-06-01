@@ -9,35 +9,37 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Domus</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="Propiedades.html">Propiedades</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>  
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dropdown</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Link</a></li>
-                  <li><a class="dropdown-item" href="#">Another link</a></li>
-                  <li><a class="dropdown-item" href="#">A third link</a></li>
-                </ul>
-              </li>
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <img src="Assets/logo_domus.png" alt="" width="45" height="30">
+      <a class="navbar-brand" href="#">DOMUS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Citas</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="tpi_domus_secretaria_v2/calendario.html">Calendario</a></li>
+              <li><a class="dropdown-item" href="#">Solicitudes</a></li>
+              
             </ul>
-          </div>
-        </div>
-      </nav>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Propiedades.html">Propiedades</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Clientes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Agentes</a>
+          </li>  
+         
+        </ul>
+      </div>
+    </div>
+  </nav>
     <div class="container-fluid h-100 w-100">
         <div class="d-flex row m-3">
             <h4>Crear Nueva Propiedad</h4>
@@ -62,7 +64,7 @@
                     </div>
                     <div class="col-3">
                       <label for="inputAddress" class="form-label">Baños</label>
-                      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                      <input type="text" class="form-control" id="inputAddress" placeholder="Ingrese Cantidad">
                     </div>
                     <div class="col-3">
                         <label for="inputAddress" class="form-label">Antiguedad</label>
@@ -113,10 +115,10 @@
                         </div>
                         <div class="row justify-content-end mt-5">
                             <div class="col-2">
-                                <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Guardar</button>
+                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Guardar</button>
                             </div>
                             <div class="col-2 ">
-                                <button type="button" class="btn btn-secondary" onclick="window.location='Propiedades.html';">Cancelar</button>
+                                <button type="button" class="btn btn-outline-secondary" onclick="window.location='Propiedades.html';">Cancelar</button>
                             </div>
                         </div>
                   </form>
@@ -131,15 +133,15 @@
             <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Aviso Importante</h5>
+                <h5 class="modal-title" id="exampleModalLabel">¿Estas seguro de crear Nueva Propiedad?</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                ...
+                 Esta a punto de Crear una Nueva Propiedad
                 </div>
                 <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-primary" onclick="window.location='Propiedades.html';" >Guardar</button>
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-outline-primary" onclick="window.location='Propiedades.html';" >Guardar</button>
                 </div>
             </div>
             </div>

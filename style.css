@@ -23,3 +23,9 @@ html, body{
   padding:8px; 
   color:#ccc;
 }
+
+td img {
+  width: 20px;
+  margin-left: 2%;
+
+}
