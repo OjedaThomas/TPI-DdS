@@ -51,9 +51,9 @@ const writeMonth = (month) => {
 
     for(let i=1; i<=getTotalDays(month); i++){
         dates.innerHTML += ` 
-        <button type="button" id="${i}" class="calendar__date calendar__item btn btn-outline-info bt-sm" onclick="setDate(${i});">
+        <div id="${i}" class="calendar__date calendar__item" onclick="setDate(${i});">
         ${i}
-        </button>`;
+        </div>`;
         
     }
 }
