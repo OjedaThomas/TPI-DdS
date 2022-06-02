@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/agente.css">
+    <link rel="stylesheet" href="css/agenteAgenda.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Agente - Inmobiliaria Domus</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light position-relative">
+      <div class="container-fluid">
+        <img src="assets/logo_domus.png" alt="" width="45" height="30">
+        <a class="navbar-brand" href="#">DOMUS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link active" data-bs-toggle="tab" href="#agenda">Agenda</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="tab" href="#propiedades">Propiedades</a>
+              </li>
+
+              <!-- USUARIO -->
+              <li class="nav-item dropdown position-absolute end-0">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Agente
+                    <img id="perfil_img_navbar" src="assets/adam_sandler.jpg" alt="">
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Ver perfil</a></li>
+                    <li><a class="dropdown-item" href="#">Modificar datos</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Cerrar sesion</a></li>
+                  </ul>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </nav>     
+    <div class="tab-content" id="fluidez">
+      <div class="tab-pane active container-lg" id="agenda">
+        <div class="row">
+          <!-- CALENDARIO -->
+          <div id="calendar_container" class="calendar text-center col">
+              <div class="calendar__info row">
+                  <div class="calendar__prev col" id="prev-month"><img id="calendar_prev" src="assets/left.png" alt=""></div>
+                  <h1 class="calendar__month col" id="month"></h1>
+                  <h1 class="calendar__year col" id="year"></h1>
+                  <div class="calendar__next col" id="next-month"><img id="calendar_next" src="assets/right.png" alt=""></div>
+              </div>
+  
+              <div class="calendar__week ">
+                  <div class="calendar__day calendar__item">Lunes</div>
+                  <div class="calendar__day calendar__item">Martes</div>
+                  <div class="calendar__day calendar__item">Miercoles</div>
+                  <div class="calendar__day calendar__item">Jueves</div>
+                  <div class="calendar__day calendar__item">Viernes</div>
+                  <div class="calendar__day calendar__item">Sabado</div>
+                  <div class="calendar__day calendar__item">Domingo</div>
+              </div>
+  
+              <div class="calendar__dates" id="dates"></div>
+          </div>
+  
+          <!-- CONTENIDO SEGUN FECHA SELECCIONADA -->
+          <div id="day_selected_container" class="col date">
+              <!-- FECHA DEL DIA SELECCIONADO -->
+              <div class="row">
+                  <div class="dateRight">
+                      <!-- NUMERO DE DIA -->
+                      <h1 id="dateNumber" class="" style="font-size: 70px;"></h1>
+                      <!-- MES Y AÑO -->
+                      <div class="" >
+                          <h3 id="dateMonth" style="font-size: 20px;"></h2>
+                          <h5 id="dateYear" style="font-size: 20px;"></h5>
+                      </div>
+                  </div>
+              </div>
+              <div class="container-lg">
+                  <hr>
+                  <!-- CONTENEDOR DE FORMULARIO PARA NUEVA TAREA -->
+                  <div class="main">
+                    <div class="tabla">  
+                      <table class="center">
+                      <tr class="datos">
+                          <th>Nombre</th>
+                          <th>Telefono</th>
+                          <th>correo</th>
+                          <th>Fecha</th>
+                          <th>Hora</th>
+                          <th>Estado</th>			    
+                      </tr>
+                      <tr class="datos">
+                          <td>Alguien</td>
+                          <td>12345678</td>
+                          <td>ejemplo@mail.com</td>
+                          <td>dia-mes-anio</td>
+                           <td>00:00 HS </td>
+                          <td>
+                            <div class="estado">
+                              <select>
+                              <option value="0"></option>
+                              <option value="1">Pendiente</option>
+                              <option value="2">Finalizada</option>
+                              <option value="3">Cancelada</option>
+                              </select>
+                          </div>
+                        </td>
+                      </tr>
+                       <tr class="datos">
+                          <td>Alguien</td>
+                          <td>12345678</td>
+                          <td>ejemplo@mail.com</td>
+                          <td>dia-mes-anio</td>
+                           <td>00:00 HS </td>
+                          <td>
+                            <div class="estado">
+                              <select>
+                              <option value="0"></option>
+                              <option value="1">Pendiente</option>
+                              <option value="2">Finalizada</option>
+                              <option value="3">Cancelada</option>
+                              </select>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="datos">
+                          <td>Alguien</td>
+                          <td>12345678</td>
+                          <td>ejemplo@mail.com</td>
+                          <td>dia-mes-anio</td>
+                           <td>00:00 HS </td>
+                          <td>
+                            <div class="estado">
+                              <select>
+                              <option value="0"></option>
+                              <option value="1">Pendiente</option>
+                              <option value="2">Finalizada</option>
+                              <option value="3">Cancelada</option>
+                              </select>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="datos">
+                          <td>Alguien</td>
+                          <td>12345678</td>
+                          <td>ejemplo@mail.com</td>
+                          <td>dia-mes-anio</td>
+                           <td>00:00 HS </td>
+                          <td>
+                            <div class="estado">
+                              <select>
+                              <option value="0"></option>
+                              <option value="1">Pendiente</option>
+                              <option value="2">Finalizada</option>
+                              <option value="3">Cancelada</option>
+                              </select>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="datos">
+                          <td>Alguien</td>
+                          <td>12345678</td>
+                          <td>ejemplo@mail.com</td>
+                          <td>dia-mes-anio</td>
+                           <td>00:00 HS </td>
+                          <td>
+                            <div class="estado">
+                              <select>
+                              <option value="0"></option>
+                              <option value="1">Pendiente</option>
+                              <option value="2">Finalizada</option>
+                              <option value="3">Cancelada</option>
+                              </select>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="datos">
+                          <td>Alguien</td>
+                          <td>12345678</td>
+                          <td>ejemplo@mail.com</td>
+                          <td>dia-mes-anio</td>
+                           <td>00:00 HS </td>
+                          <td>
+                            <div class="estado">
+                              <select>
+                              <option value="0"></option>
+                              <option value="1">Pendiente</option>
+                              <option value="2">Finalizada</option>
+                              <option value="3">Cancelada</option>
+                              </select>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="datos">
+                          <td>Alguien</td>
+                          <td>12345678</td>
+                          <td>ejemplo@mail.com</td>
+                          <td>dia-mes-anio</td>
+                           <td>00:00 HS </td>
+                          <td>
+                            <div class="estado">
+                              <select>
+                              <option value="0"></option>
+                              <option value="1">Pendiente</option>
+                              <option value="2">Finalizada</option>
+                              <option value="3">Cancelada</option>
+                              </select>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="datos">
+                          <td>Alguien</td>
+                          <td>12345678</td>
+                          <td>ejemplo@mail.com</td>
+                          <td>dia-mes-anio</td>
+                           <td>00:00 HS </td>
+                          <td>
+                            <div class="estado">
+                              <select>
+                              <option value="0"></option>
+                              <option value="1">Pendiente</option>
+                              <option value="2">Finalizada</option>
+                              <option value="3">Cancelada</option>
+                              </select>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+      </div>
+      <div class="tab-pane container-lg" id="propiedades">
+        <div>
+          <br>
+          <form id="busqueda_container" class="row g-3" action="">
+                    
+                <div class="form-check form-switch col-auto">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                  <label class="form-check-label" for="flexSwitchCheckChecked">Alquiler</label>
+                </div>
+                <div class="form-check form-switch col-auto">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                    <label class="form-check-label" for="flexSwitchCheckChecked">Venta</label>
+                </div>
+        
+              <div class="col-auto">
+                <select id="inputState" class="form-select">
+                    <option selected>Casa</option>
+                    <option>Departamento</option>
+                    <option>Terreno</option>
+                    <option>Lote</option>
+                    <option>Local comercial</option>
+                    <option>Depósito</option>
+                </select>
+              </div>
+              <div class="col-auto">
+                <div class="input-group">                  
+                    <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Buscar...">
+                    <button id="search_button" class="btn btn-outline-success input-group-text" type="submit">
+                      <img class="button_img" id="search" src="assets/search.png" alt="">
+                    </button>
+                </div>
+              </div>
+          </form>
+          <section class="grid-propertys">
+            <div class="card bg-secondary border-dark" style="width: 18rem;">
+                  <img src="assets/04-4-768x536.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">ID PROPIEDAD: 234234</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <button type="button" class="btn btn-secondary btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      + DETALLES
+                  </button>
+                  </div>
+              </div>
+              <div class="card bg-secondary border-dark" style="width: 18rem;">
+                  <img src="assets/16158875126483.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">ID PROPIEDAD: 653017</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <button type="button" class="btn btn-secondary btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      + DETALLES
+                  </button>
+                  </div>
+              </div>
+              <div class="card bg-secondary border-dark" style="width: 18rem;">
+                  <img src="assets/2572104_0.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">ID PROPIEDAD: 635970</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <button type="button" class="btn btn-secondary btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      + DETALLES
+                  </button>
+                  </div>
+              </div>
+              <div class="card bg-secondary border-dark" style="width: 18rem;">
+                  <img src="assets/7f5cd67173d9a4cb19d2c0dbb126ccde.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">ID PROPIEDAD: 639814</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <button type="button" class="btn btn-secondary btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      + DETALLES
+                  </button>
+                  </div>
+              </div>
+              <div class="card bg-secondary border-dark" style="width: 18rem;">
+                  <img src="assets/casa_bojack_1.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">ID PROPIEDAD: 634798</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <button type="button" class="btn btn-secondary btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      + DETALLES
+                  </button>
+                  </div>
+              </div>
+              <div class="card bg-secondary border-dark" style="width: 18rem;">
+                  <img src="assets/casa_bojack_2.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">ID PROPIEDAD: 635840</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <button type="button" class="btn btn-secondary btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      + DETALLES
+                  </button>
+                  </div>
+              </div>
+              <div class="card bg-secondary border-dark" style="width: 18rem;">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">ID PROPIEDAD: 253047</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <button type="button" class="btn btn-secondary btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      + DETALLES
+                  </button>
+                  </div>
+              </div>
+              <div class="card bg-secondary border-dark" style="width: 18rem;">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">ID PROPIEDAD: 365498</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <button type="button" class="btn btn-secondary btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      + DETALLES
+                  </button>
+                  </div>
+              </div>
+              <div class="card bg-secondary border-dark" style="width: 18rem;">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">ID PROPIEDAD: 658712</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <button type="button" class="btn btn-secondary btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      + DETALLES
+                  </button>
+                  </div>
+              </div>
+              <div class="card bg-secondary border-dark" style="width: 18rem;">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">ID PROPIEDAD: 954821</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <button type="button" class="btn btn-secondary btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      + DETALLES
+                  </button>
+                  </div>
+              </div>
+              <div class="card bg-secondary border-dark" style="width: 18rem;">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">ID PROPIEDAD: 153287</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <button type="button" class="btn btn-secondary btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      + DETALLES
+                  </button>
+                  </div>
+              </div>
+              <div class="card bg-secondary border-dark" style="width: 18rem;">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">ID PROPIEDAD: 651484</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <button type="button" class="btn btn-secondary btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      + DETALLES
+                  </button>
+                  </div>
+            </div>
+          </section>
+          <div class="modal fade bg-secondary" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">ID PROPIEDAD: 659840</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                          <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          </div>
+                          <div class="carousel-inner">
+                            <div class="carousel-item active">
+                              <img src="assets/04-4-768x536.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                              <img src="assets/16158875126483.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                              <img src="assets/2572104_0.jpg" class="d-block w-100" alt="...">
+                            </div>
+                          </div>
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                      </div>
+                      <div class="container-fluid h-100 w-100">
+                        <div class="d-flex row m-3">
+                            <h4>Propiedad</h4>
+                            <div class="col-2">
+                                
+                            </div>
+                            <div class="col-8 mt-3 mb-5">
+                                <form class="is-readonly row g-3">
+                                    <div class="col-md-6">
+                                        <label for="autoSizingSelect" class="form-label">Tipo</label>
+                                        <label class="visually-hidden" for="autoSizingSelect">Tipo</label>
+                                        <select class="form-select" id="autoSizingSelect">
+                                          <option selected>Seleccionar</option>
+                                          <option value="1">Venta</option>
+                                          <option value="2">Alquiler</option>
+                                          <option value="3">Compra</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <label for="inputPassword4" class="form-label">Ubicacion</label>
+                                      <input type="Ubicacion" class="form-control" id="inputPassword4">
+                                    </div>
+                                    <div class="col-3">
+                                      <label for="inputAddress" class="form-label">Baños</label>
+                                      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                    </div>
+                                    <div class="col-3">
+                                        <label for="inputAddress" class="form-label">Antiguedad</label>
+                                        <input type="text" class="form-control" id="inputAddress" placeholder="Antiguedad">
+                                      </div>
+                                      <div class="col-3">
+                                        <label for="inputAddress" class="form-label">Dormitorios</label>
+                                        <input type="text" class="form-control" id="inputAddress" placeholder="Dormitorios">
+                                      </div>
+                                      <div class="col-3">
+                                        <label for="inputAddress" class="form-label">Suites</label>
+                                        <input type="text" class="form-control" id="inputAddress" placeholder="Suites">
+                                      </div>
+                                    <div class="col-6">
+                                      <label for="inputAddress2" class="form-label">Espacios</label>
+                                      <input type="text" class="form-control" id="inputAddress2" placeholder="Espacios">
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="inputAddress2" class="form-label">Artefactos</label>
+                                        <input type="text" class="form-control" id="inputAddress2" placeholder="Artefactos">
+                                      </div>
+                                    <div class="col-md-6">
+                                      <label for="inputCity" class="form-label">Servicios</label>
+                                      <input type="text" class="form-control" id="Servicios">
+                                    </div>
+                                    <div class="col-md-6">
+                                      <label for="inputState" class="form-label">Contrato</label>
+                                      <select id="inputState" class="form-select">
+                                        <option selected>Seleccionar</option>
+                                        <option>...</option>
+                                      </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="formFileMultiple" class="form-label">Cargar Imagenes</label>
+                                        <input class="form-control" type="file" id="formFileMultiple" multiple>
+                                      </div>
+                                    <div class="">
+                                        <label for="exampleFormControlTextarea1" class="form-label">Descripcion</label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Añade una descripcion"></textarea>
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="inputAddress2" class="form-label">Id Propietario</label>
+                                        <input type="text" class="form-control" id="inputAddress2" placeholder="Id Propietario">
+                                      </div>
+                                      <div class="col-6">
+                                          <label for="inputAddress2" class="form-label">Precio</label>
+                                          <input type="text" class="form-control" id="inputAddress2" placeholder="Precio">
+                                        </div>
+                                        <div class="row justify-content-end mt-5">
+                                            <div class="col-2">
+                                              <button type="button" class="btn btn-secondary  btn-outline-dark btn-edit js-edit">Edit</button>
+                                              <button type="button" class="btn btn-secondary  btn-outline-dark btn-save js-save">Save</button>
+                                            </div>
+                                            <div class="col-2 ">
+                                                <button type="button" class="btn btn-secondary btn-outline-dark" data-bs-dismiss="modal">Cancelar</button>
+                                            </div>
+                                        </div>
+                                  </form>
+                            </div>
+                            <div class="col-2">
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div> -->
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/agente.js"></script>
+    <script src="js/calendario.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>

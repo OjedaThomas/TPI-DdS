@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/jefaComerc.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Jefa de Comercio - Inmobiliaria Domus</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light position-relative">
+        <div class="container-fluid">
+	  <img src="assets/logo_domus.png" alt="" width="45" height="30">
+          <a class="navbar-brand" href="#">DOMUS</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="nav navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" data-bs-toggle="tab" href="#agenda">Agenda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#reportes">Reportes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#archivo">Archivo</a>
+                </li>
+  
+                <!-- USUARIO -->
+                <li class="nav-item dropdown position-absolute end-0">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Jefa de Comercialización
+                      <img id="perfil_img_navbar" src="assets/adam_sandler.jpg" alt="">
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Ver perfil</a></li>
+                      <li><a class="dropdown-item" href="#">Modificar datos</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Cerrar sesion</a></li>
+                    </ul>
+                </li>
+              </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="tab-content" id="div-gral">
+        <div class="tab-pane active container-lg" id="agenda">
+            <div class="row">
+              <!-- CALENDARIO -->
+              <div id="calendar_container" class="calendar text-center col">
+                  <div class="calendar__info row">
+                      <div class="calendar__prev col" id="prev-month"><img id="calendar_prev" src="assets/left.png" alt=""></div>
+                      <h1 class="calendar__month col" id="month"></h1>
+                      <h1 class="calendar__year col" id="year"></h1>
+                      <div class="calendar__next col" id="next-month"><img id="calendar_next" src="assets/right.png" alt=""></div>
+                  </div>
+      
+                  <div class="calendar__week ">
+                      <div class="calendar__day calendar__item">Lunes</div>
+                      <div class="calendar__day calendar__item">Martes</div>
+                      <div class="calendar__day calendar__item">Miercoles</div>
+                      <div class="calendar__day calendar__item">Jueves</div>
+                      <div class="calendar__day calendar__item">Viernes</div>
+                      <div class="calendar__day calendar__item">Sabado</div>
+                      <div class="calendar__day calendar__item">Domingo</div>
+                  </div>
+      
+                  <div class="calendar__dates" id="dates"></div>
+              </div>
+      
+              <!-- CONTENIDO SEGUN FECHA SELECCIONADA -->
+              <div id="day_selected_container" class="col date">
+                  <!-- FECHA DEL DIA SELECCIONADO -->
+                  <div class="row">
+                      <div class="dateRight">
+                          <!-- NUMERO DE DIA -->
+                          <h1 id="dateNumber" class="" style="font-size: 70px;"></h1>
+                          <!-- MES Y AÑO -->
+                          <div class="" >
+                              <h3 id="dateMonth" style="font-size: 20px;"></h2>
+                              <h5 id="dateYear" style="font-size: 20px;"></h5>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="container-lg">
+                      <hr>
+                      <!-- CONTENEDOR DE FORMULARIO PARA NUEVA TAREA -->
+                      <div class="main">
+                        <div class="tabla">  
+                          <table class="center">
+                          <tr class="datos">
+                              <th>Nombre</th>
+                              <th>Telefono</th>
+                              <th>correo</th>
+                              <th>Fecha</th>
+                              <th>Hora</th>
+                              <th>Estado</th>			    
+                          </tr>
+                          <tr class="datos">
+                            <td>Alguien</td>
+                            <td>12345678</td>
+                            <td>ejemplo@mail.com</td>
+                            <td>dia-mes-anio</td>
+                            <td>00:00 HS </td>
+                            <td>Pendiente</td>
+                          </tr>
+                           <tr class="datos">
+                            <td>Alguien</td>
+                            <td>12345678</td>
+                            <td>ejemplo@mail.com</td>
+                            <td>dia-mes-anio</td>
+                            <td>00:00 HS </td>
+                            <td>Finalizado</td>
+                          </tr>
+                          <tr class="datos">
+                            <td>Alguien</td>
+                            <td>12345678</td>
+                            <td>ejemplo@mail.com</td>
+                            <td>dia-mes-anio</td>
+                            <td>00:00 HS </td>
+                            <td>Pendiente</td>
+                          </tr>
+                          <tr class="datos">
+                            <td>Alguien</td>
+                            <td>12345678</td>
+                            <td>ejemplo@mail.com</td>
+                            <td>dia-mes-anio</td>
+                            <td>00:00 HS </td>
+                            <td>Cancelada</td>
+                          </tr>
+                          <tr class="datos">
+                                <td>Alguien</td>
+                                <td>12345678</td>
+                                <td>ejemplo@mail.com</td>
+                                <td>dia-mes-anio</td>
+                                <td>00:00 HS </td>
+                                <td>Finalizado</td>
+                          </tr>
+                          <tr class="datos">
+                                <td>Alguien</td>
+                                <td>12345678</td>
+                                <td>ejemplo@mail.com</td>
+                                <td>dia-mes-anio</td>
+                                <td>00:00 HS </td>
+                                <td>Cancelada</td>
+                          </tr>
+                          <tr class="datos">
+                                <td>Alguien</td>
+                                <td>12345678</td>
+                                <td>ejemplo@mail.com</td>
+                                <td>dia-mes-anio</td>
+                                <td>00:00 HS </td>
+                                <td>Pendiente</td>
+                          </tr>
+                          <tr class="datos">
+                            <td>Alguien</td>
+                            <td>12345678</td>
+                            <td>ejemplo@mail.com</td>
+                            <td>dia-mes-anio</td>
+                            <td>00:00 HS </td>
+                            <td>Cancelada</td>
+                          </tr>
+                        </table>
+                      </div>
+                      </div>
+                      
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane container-lg" id="reportes">
+            <nav class="nav-reportes">
+                <div class="btn-group">
+                    <button class="btn btn-secondary btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Ventas
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExampleD" aria-expanded="false" aria-controls="collapseExample">Diario</a></li>
+                        <li><a class="dropdown-item" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExampleM" aria-expanded="false" aria-controls="collapseExample">Mensual</a></li>
+                        <li><a class="dropdown-item" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExampleA" aria-expanded="false" aria-controls="collapseExample">Anual</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-secondary btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        Alquileres
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExampleD" aria-expanded="false" aria-controls="collapseExample">Diario</a></li>
+                        <li><a class="dropdown-item" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExampleM" aria-expanded="false" aria-controls="collapseExample">Mensual</a></li>
+                        <li><a class="dropdown-item" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExampleA" aria-expanded="false" aria-controls="collapseExample">Anual</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-secondary btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false">
+                        Clientes
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExampleD" aria-expanded="false" aria-controls="collapseExample">Diario</a></li>
+                        <li><a class="dropdown-item" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExampleM" aria-expanded="false" aria-controls="collapseExample">Mensual</a></li>
+                        <li><a class="dropdown-item" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExampleA" aria-expanded="false" aria-controls="collapseExample">Anual</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-secondary btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Propiedades
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExampleD" aria-expanded="false" aria-controls="collapseExample">Diario</a></li>
+                        <li><a class="dropdown-item" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExampleM" aria-expanded="false" aria-controls="collapseExample">Mensual</a></li>
+                        <li><a class="dropdown-item" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExampleA" aria-expanded="false" aria-controls="collapseExample">Anual</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <br>
+            <div class="collapse container-lg" id="collapseExampleD">
+                <div class="card card-body">
+                    <article>
+                        <label class="label-reportes" for="form-select">Día</label>
+                        <select class="form-select" id="select" aria-label="Default select example">
+                            <option selected></option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                            <option value="">6</option>
+                            <option value="">7</option>
+                            <option value="">8</option>
+                            <option value="">9</option>
+                            <option value="">10</option>
+                            <option value="">11</option>
+                            <option value="">12</option>
+                            <option value="">13</option>
+                            <option value="">14</option>
+                            <option value="">15</option>
+                            <option value="">16</option>
+                            <option value="">17</option>
+                            <option value="">18</option>
+                            <option value="">19</option>
+                            <option value="">20</option>
+                            <option value="">21</option>
+                            <option value="">22</option>
+                            <option value="">23</option>
+                            <option value="">24</option>
+                            <option value="">25</option>
+                            <option value="">26</option>
+                            <option value="">27</option>
+                            <option value="">28</option>
+                            <option value="">29</option>
+                            <option value="">30</option>
+                            <option value="">31</option>
+                        </select>
+                        <label class="label-reportes" for="form-select">Mes</label>
+                        <select class="form-select" id="select" aria-label="Default select example">
+                            <option selected></option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                            <option value="">6</option>
+                            <option value="">7</option>
+                            <option value="">8</option>
+                            <option value="">9</option>
+                            <option value="">10</option>
+                            <option value="">11</option>
+                            <option value="">12</option>
+                        </select>
+                        <label class="label-reportes" for="form-select">Año</label>
+                        <select class="form-select" id="select" aria-label="Default select example">
+                            <option selected></option>
+                            <option value="">1990</option>
+                            <option value="">1991</option>
+                            <option value="">1992</option>
+                            <option value="">1993</option>
+                            <option value="">1994</option>
+                            <option value="">1995</option>
+                            <option value="">1996</option>
+                            <option value="">1997</option>
+                            <option value="">1998</option>
+                            <option value="">1999</option>
+                            <option value="">2000</option>
+                            <option value="">2001</option>
+                            <option value="">2002</option>
+                            <option value="">2003</option>
+                            <option value="">2004</option>
+                            <option value="">2005</option>
+                            <option value="">2006</option>
+                            <option value="">2007</option>
+                            <option value="">2008</option>
+                            <option value="">2009</option>
+                            <option value="">2010</option>
+                            <option value="">2011</option>
+                            <option value="">2012</option>
+                            <option value="">2013</option>
+                            <option value="">2014</option>
+                            <option value="">2015</option>
+                            <option value="">2016</option>
+                            <option value="">2017</option>
+                            <option value="">2018</option>
+                            <option value="">2019</option>
+                            <option value="">2020</option>
+                            <option value="">2021</option>
+                            <option value="">2022</option>
+                        </select>
+                    </article>
+                    <br>
+                    <button class="btn btn-secondary btn-outline-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExampleL" aria-expanded="false" aria-controls="collapseExample">
+                        OK
+                    </button>
+                    <br>
+                    <div class="collapse container-lg" id="collapseExampleL">
+                        <div class="card card-body">
+                            <table class="center">
+                                <tr class="datos">
+                                      <th>Fecha</th>
+                                      <th>Id propiedad</th>
+                                      <th>Propietario</th>
+                                      <th>Comprador</th>
+                                      <th>Agente</th>
+                                      <th>Monto</th>			    
+                                </tr>
+                                <tr class="datos">
+                                      <td>19-05-2021</td>
+                                      <td>12345678</td>  
+                                      <td>Nombre y apellido</td>
+                                      <td>Nombre y apellido</td>
+                                      <td>Nombre y apellido</td>
+                                      <td>$##########</td>
+                                </tr>
+                                <tr class="datos">
+                                      <td>19-05-2021</td>
+                                      <td>12345678</td> 												    
+                                      <td>Nombre y apellido</td>
+                                      <td>Nombre y apellido</td>
+                                      <td>Nombre y apellido</td>
+                                      <td>$##########</td>
+                                </tr>
+                              </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="collapse container-lg" id="collapseExampleM">
+                <div class="card card-body">
+                    <article>
+                        <label class="label-reportes" for="form-select">Mes</label>
+                        <select class="form-select" id="select" aria-label="Default select example">
+                            <option selected></option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                            <option value="">6</option>
+                            <option value="">7</option>
+                            <option value="">8</option>
+                            <option value="">9</option>
+                            <option value="">10</option>
+                            <option value="">11</option>
+                            <option value="">12</option>
+                        </select>
+                        <label class="label-reportes" for="form-select">Año</label>
+                        <select class="form-select" id="select" aria-label="Default select example">
+                            <option selected></option>
+                            <option value="">1990</option>
+                            <option value="">1991</option>
+                            <option value="">1992</option>
+                            <option value="">1993</option>
+                            <option value="">1994</option>
+                            <option value="">1995</option>
+                            <option value="">1996</option>
+                            <option value="">1997</option>
+                            <option value="">1998</option>
+                            <option value="">1999</option>
+                            <option value="">2000</option>
+                            <option value="">2001</option>
+                            <option value="">2002</option>
+                            <option value="">2003</option>
+                            <option value="">2004</option>
+                            <option value="">2005</option>
+                            <option value="">2006</option>
+                            <option value="">2007</option>
+                            <option value="">2008</option>
+                            <option value="">2009</option>
+                            <option value="">2010</option>
+                            <option value="">2011</option>
+                            <option value="">2012</option>
+                            <option value="">2013</option>
+                            <option value="">2014</option>
+                            <option value="">2015</option>
+                            <option value="">2016</option>
+                            <option value="">2017</option>
+                            <option value="">2018</option>
+                            <option value="">2019</option>
+                            <option value="">2020</option>
+                            <option value="">2021</option>
+                            <option value="">2022</option>
+                        </select>
+                    </article>
+                    <br>
+                    <button class="btn btn-secondary btn-outline-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExampleL" aria-expanded="false" aria-controls="collapseExample">
+                        OK
+                    </button>
+                    <br>
+                    <div class="collapse container-lg" id="collapseExampleL">
+                        <div class="card card-body">
+                            <table class="center">
+                                <tr class="datos">
+                                      <th>Fecha</th>
+                                      <th>Id propiedad</th>
+                                      <th>Propietario</th>
+                                      <th>Comprador</th>
+                                      <th>Agente</th>
+                                      <th>Monto</th>			    
+                                </tr>
+                                <tr class="datos">
+                                      <td>19-05-2021</td>
+                                      <td>12345678</td>  
+                                      <td>Nombre y apellido</td>
+                                      <td>Nombre y apellido</td>
+                                      <td>Nombre y apellido</td>
+                                      <td>$##########</td>
+                                </tr>
+                                <tr class="datos">
+                                      <td>19-05-2021</td>
+                                      <td>12345678</td> 												    
+                                      <td>Nombre y apellido</td>
+                                      <td>Nombre y apellido</td>
+                                      <td>Nombre y apellido</td>
+                                      <td>$##########</td>
+                                </tr>
+                              </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="collapse container-lg" id="collapseExampleA">
+                <div class="card card-body">
+                    <article>
+                        <label class="label-reportes" for="form-select">Año</label>
+                        <select class="form-select" id="select" aria-label="Default select example">
+                            <option selected></option>
+                            <option value="">1990</option>
+                            <option value="">1991</option>
+                            <option value="">1992</option>
+                            <option value="">1993</option>
+                            <option value="">1994</option>
+                            <option value="">1995</option>
+                            <option value="">1996</option>
+                            <option value="">1997</option>
+                            <option value="">1998</option>
+                            <option value="">1999</option>
+                            <option value="">2000</option>
+                            <option value="">2001</option>
+                            <option value="">2002</option>
+                            <option value="">2003</option>
+                            <option value="">2004</option>
+                            <option value="">2005</option>
+                            <option value="">2006</option>
+                            <option value="">2007</option>
+                            <option value="">2008</option>
+                            <option value="">2009</option>
+                            <option value="">2010</option>
+                            <option value="">2011</option>
+                            <option value="">2012</option>
+                            <option value="">2013</option>
+                            <option value="">2014</option>
+                            <option value="">2015</option>
+                            <option value="">2016</option>
+                            <option value="">2017</option>
+                            <option value="">2018</option>
+                            <option value="">2019</option>
+                            <option value="">2020</option>
+                            <option value="">2021</option>
+                            <option value="">2022</option>
+                        </select>
+                    </article>
+                    <br>
+                    <button class="btn btn-secondary btn-outline-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExampleL" aria-expanded="false" aria-controls="collapseExample">
+                        OK
+                    </button>
+                    <br>
+                    <div class="collapse container-lg" id="collapseExampleL">
+                        <div class="card card-body">
+                            <table class="center">
+                                <tr class="datos">
+                                      <th>Fecha</th>
+                                      <th>Id propiedad</th>
+                                      <th>Propietario</th>
+                                      <th>Comprador</th>
+                                      <th>Agente</th>
+                                      <th>Monto</th>			    
+                                </tr>
+                                <tr class="datos">
+                                      <td>19-05-2021</td>
+                                      <td>12345678</td>  
+                                      <td>Nombre y apellido</td>
+                                      <td>Nombre y apellido</td>
+                                      <td>Nombre y apellido</td>
+                                      <td>$##########</td>
+                                </tr>
+                                <tr class="datos">
+                                      <td>19-05-2021</td>
+                                      <td>12345678</td> 												    
+                                      <td>Nombre y apellido</td>
+                                      <td>Nombre y apellido</td>
+                                      <td>Nombre y apellido</td>
+                                      <td>$##########</td>
+                                </tr>
+                              </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+              
+        </div>
+
+        <div class="tab-pane container-lg" id="archivo">
+            <nav class="nav-reportes">
+                <div class="btn-group">
+                    <button class="btn btn-secondary btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Propiedades
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExampleRPV" aria-expanded="false" aria-controls="collapseExample">Propiedades vendidas</a></li>
+                        <li><a class="dropdown-item" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExampleRPH" aria-expanded="false" aria-controls="collapseExample">Propiedades historico</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-secondary btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        Clientes
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExampleRCA" aria-expanded="false" aria-controls="collapseExample">Clientes actuales</a></li>
+                        <li><a class="dropdown-item" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExampleRCH" aria-expanded="false" aria-controls="collapseExample">Clientes historico</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <br>
+            <div class="collapse container-lg" id="collapseExampleRPV">
+                <div class="card card-body">
+                    <div class="tabla">
+						<h5>Propiedades Vendidas</h5>
+                        <article>
+						    <input type="text" class="form-control" placeholder="Buscar propiedad" name="text1">
+						    <button class="btn btn-success">Buscar</button>
+                        </article>
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+								<th>Fecha</th>
+								<th>Id Propiedad</th>
+								<th>Numero Transaccion</th>
+								<th>Monto de Ingreso</th>
+								<th>Monto de Egreso</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+								<td>05/06/2021</td>
+                                <td>#2343453</td>
+								<td>1</td>
+								<td>$15000</td>
+								<td>$23500</td>
+								</tr>
+								<tr>
+								<td>08/06/2021</td>
+                                <td>#2343453</td>
+								<td>2</td>
+								<td>$15000</td>
+								<td>$23500</td>														
+								</tr>
+								<tr>
+								<td>15/06/2021</td>
+                                <td>#2343453</td>
+								<td>3</td>
+								<td>$15000</td>
+								<td>$22500</td>														
+								</tr>
+							</tbody>
+						</table>
+					</div>
+                </div>
+            </div>
+            <br>
+            <div class="collapse container-lg" id="collapseExampleRPH">
+                <div class="card card-body">
+                    <div class="tabla">
+						<h5>Propiedades Historico</h5>
+                        <article>
+						    <input type="text" class="form-control" placeholder="Buscar propiedad" name="text1">
+						    <button class="btn btn-success">Buscar</button>
+                        </article>
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+								<th>Fecha</th>
+								<th>Id Propiedad</th>
+								<th>Numero Transaccion</th>
+								<th>Monto de Ingreso</th>
+								<th>Monto de Egreso</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+								<td>05/06/2021</td>
+                                <td>#2343453</td>
+								<td>1</td>
+								<td>$15000</td>
+								<td>$23500</td>
+								</tr>
+								<tr>
+								<td>08/06/2021</td>
+                                <td>#2343453</td>
+								<td>2</td>
+								<td>$15000</td>
+								<td>$23500</td>														
+								</tr>
+								<tr>
+								<td>15/06/2021</td>
+                                <td>#2343453</td>
+								<td>3</td>
+								<td>$15000</td>
+								<td>$22500</td>														
+								</tr>
+							</tbody>
+						</table>
+					</div>
+                </div>
+            </div>
+            <br>
+            <div class="collapse container-lg" id="collapseExampleRCA">
+                <div class="card card-body">
+                    <div class="tabla">
+						<h5>Clientes Actuales</h5>
+                        <article>
+						    <input type="text" class="form-control" placeholder="Buscar propiedad" name="text1">
+						    <button class="btn btn-success">Buscar</button>
+                        </article>
+						<table class="table table-bordered">
+							<thead>
+                                <tr>
+                                  <th>Nombre y Apellido</th>
+                                  <th>Numero Transaccion</th>
+                                  <th>Monto de Ingreso</th>
+                                  <th>Monto de Egreso</th>
+                                  
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                  <td>Ramon Abila</td>
+                                  <td>1</td>
+                                  <td>$15000</td>
+                                  <td>$23500</td>	
+                                </tr>
+                                <tr>
+                                  <td>Roberto Ejemplo</td>
+                                  <td>2</td>
+                                  <td>$15000</td>
+                                  <td>$23500</td>														
+                                </tr>
+                                <tr>
+                                  <td>Tatiana Ferro</td>
+                                  <td>3</td>
+                                  <td>$15000</td>
+                                  <td>$22500</td>														
+                                </tr>
+                            </tbody>
+						</table>
+					</div>
+                </div>
+            </div>
+            <br>
+            <div class="collapse container-lg" id="collapseExampleRCH">
+                <div class="card card-body">
+                    <div class="tabla">
+						<h5>Clientes Historico</h5>
+                        <article>
+						    <input type="text" class="form-control" placeholder="Buscar propiedad" name="text1">
+						    <button class="btn btn-success">Buscar</button>
+                        </article>
+						<table class="table table-bordered">
+							<thead>
+                                <tr>
+                                  <th>Nombre y Apellido</th>
+                                  <th>Numero Transaccion</th>
+                                  <th>Monto de Ingreso</th>
+                                  <th>Monto de Egreso</th>
+                                  
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                  <td>Ramon Abila</td>
+                                  <td>1</td>
+                                  <td>$15000</td>
+                                  <td>$23500</td>	
+                                </tr>
+                                <tr>
+                                  <td>Roberto Ejemplo</td>
+                                  <td>2</td>
+                                  <td>$15000</td>
+                                  <td>$23500</td>														
+                                </tr>
+                                <tr>
+                                  <td>Tatiana Ferro</td>
+                                  <td>3</td>
+                                  <td>$15000</td>
+                                  <td>$22500</td>														
+                                </tr>
+                            </tbody>
+						</table>
+					</div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <script src="js/calendario.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script> 
+</body>
+</html>

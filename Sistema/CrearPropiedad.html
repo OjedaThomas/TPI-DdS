@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Propiedad</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg" id="navbar">
+    <div class="container-fluid">
+      <img src="assets/logo_domus.png" alt="" width="45" height="30">
+      <a class="navbar-brand text-white" href="#">DOMUS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">Citas</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="tpi_domus_secretaria_v2/calendario.html">Calendario</a></li>
+              <li><a class="dropdown-item" href="#">Solicitudes</a></li>
+              
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="Propiedades.html">Propiedades</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled text-white" href="#">Clientes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled text-white" href="#">Agentes</a>
+          </li>  
+         
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <div class="container-fluid h-100 w-100">
+        <div class="d-flex row m-3">
+            <h4>Crear Nueva Propiedad</h4>
+            <div class="col-2">
+                
+            </div>
+            <div class="col-8 mt-3 mb-5">
+                <form class="row g-3">
+                    <div class="col-md-6">
+                        <label for="autoSizingSelect" class="form-label">Tipo</label>
+                        <label class="visually-hidden" for="autoSizingSelect">Tipo</label>
+                        <select class="form-select" id="autoSizingSelect">
+                          <option selected>Seleccionar</option>
+                          <option value="1">Venta</option>
+                          <option value="2">Alquiler</option>
+                          <option value="3">Compra</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputPassword4" class="form-label">Ubicacion</label>
+                      <input type="Ubicacion" class="form-control" id="inputPassword4">
+                    </div>
+                    <div class="col-3">
+                      <label for="inputAddress" class="form-label">Baños</label>
+                      <input type="text" class="form-control" id="inputAddress" placeholder="Ingrese Cantidad">
+                    </div>
+                    <div class="col-3">
+                        <label for="inputAddress" class="form-label">Antiguedad</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="Antiguedad">
+                      </div>
+                      <div class="col-3">
+                        <label for="inputAddress" class="form-label">Dormitorios</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="Dormitorios">
+                      </div>
+                      <div class="col-3">
+                        <label for="inputAddress" class="form-label">Suites</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="Suites">
+                      </div>
+                    <div class="col-6">
+                      <label for="inputAddress2" class="form-label">Espacios</label>
+                      <input type="text" class="form-control" id="inputAddress2" placeholder="Espacios">
+                    </div>
+                    <div class="col-6">
+                        <label for="inputAddress2" class="form-label">Artefactos</label>
+                        <input type="text" class="form-control" id="inputAddress2" placeholder="Artefactos">
+                      </div>
+                    <div class="col-md-6">
+                      <label for="inputCity" class="form-label">Servicios</label>
+                      <input type="text" class="form-control" id="Servicios">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputState" class="form-label">Contrato</label>
+                      <select id="inputState" class="form-select">
+                        <option selected>Seleccionar</option>
+                        <option>...</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="formFileMultiple" class="form-label">Cargar Imagenes</label>
+                        <input class="form-control" type="file" id="formFileMultiple" multiple>
+                      </div>
+                    <div class="">
+                        <label for="exampleFormControlTextarea1" class="form-label">Descripcion</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Añade una descripcion"></textarea>
+                    </div>
+                    <div class="col-6">
+                        <label for="inputAddress2" class="form-label">Id Propietario</label>
+                        <input type="text" class="form-control" id="inputAddress2" placeholder="Id Propietario">
+                      </div>
+                      <div class="col-6">
+                          <label for="inputAddress2" class="form-label">Precio</label>
+                          <input type="text" class="form-control" id="inputAddress2" placeholder="Precio">
+                        </div>
+                        <div class="row justify-content-end mt-5">
+                            <div class="col-2">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Guardar</button>
+                            </div>
+                            <div class="col-2 ">
+                                <button type="button" class="btn btn-danger" onclick="window.location='Propiedades.html';">Cancelar</button>
+                            </div>
+                        </div>
+                  </form>
+            </div>
+            <div class="col-2">
+            </div>
+        </div>
+    </div>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">¿Estas seguro de crear Nueva Propiedad?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                 Esta a punto de Crear una Nueva Propiedad
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" onclick="window.location='Propiedades.html';" >Guardar</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+    <nav class="navbar fixed-bottom mt-3 text-white" id="navbar">
+        <div class="container-fluid aling-content-center justify-content-center">
+            <div class="d-flex justify-content-center"> Diseño de Sitemas - G6</div>
+        </div>
+    </nav>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+  
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    position: relative;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/* NAVBAR */
+
+#perfil_img_navbar {
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+}
+
+/* nav pagos */
+
+.nav-payments {
+    display:flex;
+    margin-top: 1rem;
+    justify-content: space-evenly;
+    
+}
+
+/* boton transacciones */
+
+.nav-transacciones {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+#datepicker {
+    margin-top: 100px;
+    width: 300px;
+  }

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerente - Inmobiliaria Domus</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <img src="Assets/logo_domus.png" alt="" width="45" height="30">
+      <a class="navbar-brand" href="#">DOMUS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Citas</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="tpi_domus_secretaria_v2/calendario.html">Calendario</a></li>
+              <li><a class="dropdown-item" href="#">Solicitudes</a></li>
+              
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Propiedades.html">Propiedades</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Clientes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Agentes</a>
+          </li>  
+          
+          <li class="nav-item dropdown position-absolute end-0">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Gerente
+                    <img id="perfil_img_navbar" src="" alt="">
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Ver perfil</a></li>
+                    <li><a class="dropdown-item" href="#">Modificar datos</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Cerrar sesion</a></li>
+                  </ul>
+              </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <div class="container-fluid w-100 h-100"> 
+      <div class="input-group mb-5">
+        <button class="btn btn-secondary btn-outline-dark" type="button" id="button-addon1" onclick="window.location='CrearPropiedad.html';">Nueva Propiedad</button>
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Buscar por...</option>
+          <option value="1">Compra</option>
+          <option value="2">Venta</option>
+          <option value="3">Alquiler</option>
+        </select>                 
+          <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Buscar">
+          <button class="btn btn-outline-success input-group-text" type="submit">
+            <img id="search" src="Assets/search.png" height="20" width="20">
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-10">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Id propietario</th>
+                <th class="col-md-2 col-xs-2">Propietario</th>
+                <th class="col-md-3 col-xs-3">Tipo</th>
+                <th class="col-md-3 col-xs-3">Contrato</th>
+                <th class="col-md-2 col-xs-2">Precio</th>
+              </tr>
+              <tr class="warning no-result">
+                <td colspan="4"><i class="fa fa-warning"></i> No result</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr >
+                <th scope="row">1</th>
+                <td>Oracio Lopez</td>
+                <td>Departamento</td>
+                <td>Venta</td>
+                <td>17800000</td>
+                <td><img src="assets/boton-editar.png" alt=""><img src="assets/eliminar.png" alt=""></td>
+              </tr>
+              <tr >
+                <th scope="row">2</th>
+                <td>Pedro Escamoso</td>
+                <td>Casa</td>
+                <td>Venta</td>
+                <td>120000</td>
+                <td><img src="assets/boton-editar.png" alt=""><img src="assets/eliminar.png" alt=""></td>
+              </tr>
+              <tr >
+                <th scope="row">3</th>
+                <td>Cosme Fulanito</td>
+                <td>Departamento</td>
+                <td>Alquiler</td>
+                <td>25000</td>
+                <td><img src="assets/boton-editar.png" alt=""><img src="assets/eliminar.png" alt=""></td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Maria Retamozo</td>
+                <td>Casa</td>
+                <td>Alquiler</td>
+                <td>50000</td>
+                <td><img src="assets/boton-editar.png" alt=""><img src="assets/eliminar.png" alt=""></td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>Maria Retamozo</td>
+                <td>Casa</td>
+                <td>Alquiler</td>
+                <td>50000</td>
+                <td><img src="assets/boton-editar.png" alt=""><img src="assets/eliminar.png" alt=""></td>
+              </tr>
+              <tr>
+                <th scope="row">6</th>
+                <td>Maria Retamozo</td>
+                <td>Casa</td>
+                <td>Alquiler</td>
+                <td>50000</td>
+                <td><img src="assets/boton-editar.png" alt=""><img src="assets/eliminar.png" alt=""></td>
+              </tr>
+              <tr>
+                <th scope="row">7</th>
+                <td>Maria Retamozo</td>
+                <td>Casa</td>
+                <td>Alquiler</td>
+                <td>50000</td>
+                <td><img src="assets/boton-editar.png" alt=""><img src="assets/eliminar.png" alt=""></td>
+              </tr>
+              <tr>
+                <th scope="row">8</th>
+                <td>Maria Retamozo</td>
+                <td>Casa</td>
+                <td>Alquiler</td>
+                <td>50000</td>
+                <td><img src="assets/boton-editar.png" alt=""><img src="assets/eliminar.png" alt=""></td>
+              </tr>
+              <tr>
+                <th scope="row">9</th>
+                <td>Maria Retamozo</td>
+                <td>Casa</td>
+                <td>Alquiler</td>
+                <td>50000</td>
+                <td><img src="assets/boton-editar.png" alt=""><img src="assets/eliminar.png" alt=""></td>
+              </tr>
+              <tr>
+                <th scope="row">10</th>
+                <td>Maria Retamozo</td>
+                <td>Casa</td>
+                <td>Alquiler</td>
+                <td>50000</td>
+                <td><img src="assets/boton-editar.png" alt=""><img src="assets/eliminar.png" alt=""></td>
+              </tr>
+            </tbody>
+        </table>
+        </div>
+  
+      </div>
+      
+    </div>
+        <nav class="navbar fixed-bottom bg-light">
+            <div class="container-fluid aling-content-center justify-content-center">
+                <div class="d-flex justify-content-center"> Diseño de Sitemas - G6</div>
+            </div>
+        </nav>
+    </div>
+    <script src="main.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  </body>
+</html>
