@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/jefaAdmin.css">
+    <title>Inmobiliaria Domus</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light position-relative" id="navbar">
+        <div class="container-fluid">
+          <a class="link-logo" role="button" href="jefaAdmin.html"><img src="Assets/logo_domus.png" alt="" width="45" height="30"></a>
+          <a class="navbar-brand text-white" href="#">DOMUS</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="nav navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown" href="#">Transacciones</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item nav-link" href="jefaAdmin.html">Movimientos de Caja</a></li>
+                        <li><a class="dropdown-item nav-link" href="reportesAdmin.html">Reportes</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" data-bs-toggle="tab" href="#archivo">Archivo</a>
+                </li>
+  
+                <!-- USUARIO -->
+                <li class="nav-item dropdown position-absolute end-0">
+                    <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Jefa de Administración
+                      <img id="perfil_img_navbar" src="assets/adam_sandler.jpg" alt="">
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Ver perfil</a></li>
+                      <li><a class="dropdown-item" href="#">Modificar datos</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Cerrar sesion</a></li>
+                    </ul>
+                </li>
+              </ul>
+          </div>
+        </div>
+    </nav>
+    <div class="tab-content" id="div-gral">
+
+        <div class="container-lg" id="archivo">
+            <div class="card card-body">
+                <div class="tabla">
+                    <h5>Archivo de Clientes</h5>
+                    <article>
+                        <input type="text" class="form-control" placeholder="Buscar cliente" name="text1">
+                        <button class="btn btn-success">Buscar</button>
+                    </article>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                              <th>Nombre y Apellido</th>
+                              <th>Email</th>
+                              <th>ID Cliente</th>
+                              <th>Telefono</th>
+                              
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                              <td>Ramon Abila</td>
+                              <td>email@gmail.com</td>
+                              <td>516515</td>
+                              <td>3624859874</td>	
+                            </tr>
+                            <tr>
+                              <td>Roberto Ejemplo</td>
+                              <td>email@gmail.com</td>
+                              <td>821355</td>
+                              <td>3624586321</td>														
+                            </tr>
+                            <tr>
+                              <td>Tatiana Ferro</td>
+                              <td>email@gmail.com</td>
+                              <td>897545</td>
+                              <td>3624985621</td>														
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>

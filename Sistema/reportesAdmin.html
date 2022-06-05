@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/jefaAdmin.css">
+    <title>Inmobiliaria Domus</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light position-relative" id="navbar">
+        <div class="container-fluid">
+          <a class="link-logo" role="button" href="jefaAdmin.html"><img src="Assets/logo_domus.png" alt="" width="45" height="30"></a>
+          <a class="navbar-brand text-white" href="#">DOMUS</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="nav navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown" href="jefaAdmin.html">Transacciones</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item nav-link" href="jefaAdmin.html">Movimientos de Caja</a></li>
+                        <li><a class="dropdown-item nav-link" href="reportesAdmin.html">Reportes</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="archivoAdmin.html">Archivo</a>
+                </li>
+  
+                <!-- USUARIO -->
+                <li class="nav-item dropdown position-absolute end-0">
+                    <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Jefa de Administración
+                      <img id="perfil_img_navbar" src="assets/adam_sandler.jpg" alt="">
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Ver perfil</a></li>
+                      <li><a class="dropdown-item" href="#">Modificar datos</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Cerrar sesion</a></li>
+                    </ul>
+                </li>
+              </ul>
+          </div>
+        </div>
+    </nav>
+    <div class="tab-content" id="div-gral">
+        <div class="tab-pane container-lg active">
+            <br>
+            <div class="tab-pane container-lg active" id="movimientos">
+                <div class="card card-body">
+                    <h5>Reporte de transacciones</h5>
+                    <hr>
+                    <article class="cabecera">
+                        <label for="">Fecha Inicio</label>
+                        <input type="date" placeholder="Elija fecha inicio">
+                        <label for="">Fecha Fin</label>
+                        <input type="date" name="" id="" placeholder="Elija fecha fin">
+                        <br>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                              Seleccione tipo de Reporte
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li>
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                  Caja de Alquileres
+                                </label>
+                              </li>
+                              <li>
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                  Caja de Ventas
+                                </label>
+                              </li>
+                              <li>
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                  Entradas Salidas
+                                </label>
+                              </li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-danger" id="boton-continuar" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExampleCont" aria-expanded="false" aria-controls="collapseExample">
+                            Continuar
+                        </button>
+                    </article>
+                    <br>
+                    <div class="collapse" id="collapseExampleCont">
+                        <div class="card card-body">
+                            <head>
+                                <h5>Listado de movimientos</h5>
+                            </head>
+                            <article>
+                                <table class="table table-bordered">
+                                    <thead>
+                                      <tr>
+                                        <th>Fecha</th>
+                                        <th>Numero Transaccion</th>
+                                        <th>Monto de Ingreso</th>
+                                        <th>Monto de Egreso</th>
+                                        
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>05/06/2021</td>
+                                        <td>1</td>
+                                        <td>$15000</td>
+                                        <td>$23500</td>	
+                                      </tr>
+                                      <tr>
+                                        <td>08/06/2021</td>
+                                        <td>2</td>
+                                        <td>$15000</td>
+                                        <td>$23500</td>														
+                                      </tr>
+                                      <tr>
+                                        <td>15/06/2021</td>
+                                        <td>3</td>
+                                        <td>$15000</td>
+                                        <td>$22500</td>														
+                                      </tr>
+                                    </tbody>
+                                </table>  
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+
+              
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>
