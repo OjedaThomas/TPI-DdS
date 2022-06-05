@@ -1,3 +1,69 @@
+:root {
+    --color-primary-dark-deep: #00134f;
+    --color-primary-dark2: #002185;
+    --color-primary-dark1: #039;
+    --color-primary: #003da5;
+    --color-primary-light1: #1546b1;
+    --color-primary-light2: #1d4ebb;
+    --color-primary-light3: #4a68c5;
+    --color-primary-light4: #6d83cf;
+    --color-primary-light5: #98a6dc;
+    --color-primary-light6: #c1c9ea;
+    --color-primary-light7: #e6e9f7;
+    --color-secondary-dark2: #c1001b;
+    --color-secondary-dark1: #cf1128;
+    --color-secondary: #dc1c2f;
+    --color-secondary-light1: #ee2935;
+    --color-secondary-light2: #fd3436;
+    --color-secondary-light3: #f74a51;
+    --color-secondary-light4: #ec6f74;
+    --color-secondary-light5: #f4989b;
+    --color-secondary-light6: #ffccd3;
+    --color-secondary-light7: #ffebef;
+    --color-grey-nero: #353535;
+    --color-grey-silver: #7e7e7e;
+    --color-grey-iron: #b2b2b2;
+    --color-grey-unicorn: #e7e7e7;
+    --color-grey-silk: #f2f2f2;
+    --color-grey-cloud: #f9f9f9;
+    --color-error: #b00020;
+    --color-correct: #36da57;
+    --color-background: #fafafa;
+    --color-background-2: #f7f7f7;
+    --color-shadow: #2a2a2a;
+    --color-hunter: #172d4d;
+    --color-sapphire: #0e1d32;
+    --color-raven: #1c2534;
+    --color-sleep: #091323;
+    --font-48px: 3em;
+    --font-40px: 2.5em;
+    --font-32px: 2em;
+    --font-26px: 1.625em;
+    --font-20px: 1.25em;
+    --font-18px: 1.125em;
+    --font-16px: 1em;
+    --font-14px: 0.875em;
+    --font-12px: 0.75em;
+    --space-88px: 88px;
+    --space-80px: 80px;
+    --space-72px: 72px;
+    --space-64px: 64px;
+    --space-56px: 56px;
+    --space-48px: 48px;
+    --space-40px: 40px;
+    --space-32px: 32px;
+    --space-24px: 24px;
+    --space-16px: 16px;
+    --space-8px: 8px;
+    --button-height-48px: 48px;
+    --button-height-40px: 40px;
+    --button-height-32px: 32px;
+    --button-height-24px: 24px;
+    --topbar-height-desktop: 76px;
+    --topbar-height-mobile: 48px;
+    --navbar-filters-height: 64px;
+}
+
 html {
     box-sizing: border-box;
     font-size: 16px;
@@ -58,10 +124,19 @@ body {
 
 /* NAVBAR */
 
+.link-logo {
+    margin-right: 1rem;
+}
+
 #perfil_img_navbar {
     border-radius: 100%;
     width: 30px;
     height: 30px;
+}
+
+#navbar {
+    background-color: var(--color-primary) !important;
+    padding: 10px;
 }
 
 
@@ -156,4 +231,20 @@ body {
 
 .card section input {
     width: 10rem;
+}
+
+/* date de movimiento de caja */
+
+.date {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.date label {
+    font-size: 1.5rem;
+}
+
+.date input {
+    margin-left: -5.5rem;
+    height: 2rem;
 }
