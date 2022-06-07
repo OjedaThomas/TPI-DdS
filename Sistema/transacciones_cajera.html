@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/cajera.css">
+    <title>Inmobiliaria Domus</title>
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg position-relative" id="navbar">
+    <div class="container-fluid">
+      <a class="link-logo" role="button" href="cajera.html"><img src="Assets/logo_domus.png" alt="" width="45" height="30"></a>
+      <a class="navbar-brand text-white" href="#">DOMUS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="nav navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+                <a class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown" href="cajera.html">Pagos</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item nav-link" href="cajera.html">Alquiler</a></li>
+                    <li><a class="dropdown-item nav-link" href="pventas_cajera.html">Ventas</a></li>
+                    <li><a class="dropdown-item nav-link" href="e-s_cajera.html">Entradas/Salidas</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="transacciones_cajera.html">Transacciones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="cierre_cajera.html">Cierre de Caja</a>
+            </li>
+
+
+            <!-- USUARIO -->
+            <li class="nav-item dropdown position-absolute end-0">
+                <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Jefa de Administración
+                  <img id="perfil_img_navbar" src="assets/adam_sandler.jpg" alt="">
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Ver perfil</a></li>
+                  <li><a class="dropdown-item" href="#">Modificar datos</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Cerrar sesion</a></li>
+                </ul>
+            </li>
+          </ul>
+      </div>
+    </div>
+  </nav>
+    <div class="tab-content">
+        <div class="tab-pane active container-lg" id="pagos">
+          <br>
+          <h2 class="text-center">Transacciones</h2>
+          <br>
+          <section class="date">
+            <label for="">Fecha Inicio</label>
+            <input type="date" placeholder="Elija fecha inicio">
+            <label for="">Fecha Fin</label>
+            <input type="date" name="" id="" placeholder="Elija fecha fin">
+            <br>
+            <br>
+            <button class="btn btn-danger" id="boton-continuar" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExampleCont" aria-expanded="false" aria-controls="collapseExample">
+                Continuar
+            </button>
+        </section>
+        <hr>
+        <br>
+        <div class="collapse" id="collapseExampleCont">
+            <div class="card card-body">
+                <head>
+                    <h5>Listado de movimientos</h5>
+                </head>
+                <article>
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Fecha</th>
+                            <th>Numero Transaccion</th>
+                            <th>Monto de Ingreso</th>
+                            <th>Monto de Egreso</th>
+                            <th></th>
+                            
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>05/06/2021</td>
+                            <td>1</td>
+                            <td>$15000</td>
+                            <td>$23500</td>
+                            <td><img class="view" src="assets/view-eye-svgrepo-com.svg" alt="" width="25rem" height="25rem"></td>	
+                          </tr>
+                          <tr>
+                            <td>08/06/2021</td>
+                            <td>2</td>
+                            <td>$15000</td>
+                            <td>$23500</td>
+                            <td><img class="view" src="assets/view-eye-svgrepo-com.svg" alt="" width="25rem" height="25rem"></td>		
+                          </tr>
+                          <tr>
+                            <td>15/06/2021</td>
+                            <td>3</td>
+                            <td>$15000</td>
+                            <td>$22500</td>
+                            <td><img class="view" src="assets/view-eye-svgrepo-com.svg" alt="" width="25rem" height="25rem"></td>			
+                          </tr>
+                        </tbody>
+                    </table>  
+                </article>
+            </div>
+        </div>
+        </div>
+        
+        <div class="tab-pane container-lg" id="cierre-caja">
+          <nav class="nav-payments">
+            <div class="btn-group">
+                <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Movimientos
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample">Caja de Ventas</a></li>
+                    <li><a class="dropdown-item" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample">Caja de Alquileres</a></li>
+                    <li><a class="dropdown-item" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample">Caja de Entradas/Salidas</a></li>
+                    <li><a class="dropdown-item" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample">Todos</a></li>
+                </ul>
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Imprimir balance
+              </button>
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">¿Desea continuar?</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      Esta accion almacenara las transacciones realizadas en el dia.
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                      <button type="button" class="btn btn-success">Confirmar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+          <br>
+          <div class="collapse" id="collapseExample4">
+            <div class="card card-body">
+              <table class="table text-center">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Concepto</th>
+                        <th>Entradas</th>
+                        <th>Salidas</th>
+                        <th>Saldo</th>
+                        <th>Hora</th>
+                    </tr>
+                </thead>
+                <tbody>                    
+                    <tr class="concretadas">
+                        <td>dd/mm/aaaa</td>                        
+                        <td>Pago por alquiler</td>
+                        <td>$65464,5</td>
+                        <td>$0</td>
+                        <td>$64655,8</td>
+                        <td>8:10</td>
+                    </tr>
+                    <tr class="pendientes">
+                      <td>dd/mm/aaaa</td>                        
+                      <td>Pago por alquiler</td>
+                      <td>$65464,5</td>
+                      <td>$0</td>
+                      <td>$64655,8</td>
+                      <td>8:10</td>
+                    </tr>
+                    <tr class="pendientes">
+                        <td>dd/mm/aaaa</td>                        
+                        <td>Pago por alquiler</td>
+                        <td>$65464,5</td>
+                        <td>$0</td>
+                        <td>$64655,8</td>
+                        <td>8:10</td>
+                    </tr>
+                    <tr class="concretadas">
+                        <td>dd/mm/aaaa</td>                        
+                        <td>Pago por alquiler</td>
+                        <td>$65464,5</td>
+                        <td>$0</td>
+                        <td>$64655,8</td>
+                        <td>8:10</td>
+                    </tr> 
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>

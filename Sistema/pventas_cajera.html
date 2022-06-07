@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/cajera.css">
+    <title>Inmobiliaria Domus</title>
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg position-relative" id="navbar">
+    <div class="container-fluid">
+      <a class="link-logo" role="button" href="cajera.html"><img src="Assets/logo_domus.png" alt="" width="45" height="30"></a>
+      <a class="navbar-brand text-white" href="#">DOMUS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="nav navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+                <a class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown" href="cajera.html">Pagos</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item nav-link" href="cajera.html">Alquiler</a></li>
+                    <li><a class="dropdown-item nav-link" href="pventas_cajera.html">Ventas</a></li>
+                    <li><a class="dropdown-item nav-link" href="e-s_cajera.html">Entradas/Salidas</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="transacciones_cajera.html">Transacciones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="cierre_cajera.html">Cierre de Caja</a>
+            </li>
+
+
+            <!-- USUARIO -->
+            <li class="nav-item dropdown position-absolute end-0">
+                <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Jefa de Administración
+                  <img id="perfil_img_navbar" src="assets/adam_sandler.jpg" alt="">
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Ver perfil</a></li>
+                  <li><a class="dropdown-item" href="#">Modificar datos</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Cerrar sesion</a></li>
+                </ul>
+            </li>
+          </ul>
+      </div>
+    </div>
+  </nav>
+    <div class="tab-content">
+        <div class="tab-pane active container-lg" id="pagos">
+          <br>
+          <h2 class="text-center">Pagos de Ventas</h2>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModalAñadir">
+              Añadir pago
+            </button>
+          </div>
+          
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModalAñadir" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header bg-danger">
+                  <h3 class="modal-title text-center texto-m" id="exampleModalLabel">ID PROPIEDAD: #345345</h3>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div id="add_task_container" class="row">
+                    <form action="">
+                      <div class="input-group mb-3">
+                        <span class="input-group-text bg-danger" id="basic-addon1">Inquilino</span><input class="form-control" type="text" value="Juan Gomez" aria-label="readonly input example" readonly>
+                      </div>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text bg-danger" id="basic-addon1">Propietario</span><input class="form-control" type="text" value="Juan Gomez" aria-label="readonly input example" readonly>
+                      </div>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text bg-danger" id="basic-addon1">Precio</span><input class="form-control" type="text" value="656541" aria-label="readonly input example" readonly>
+                        <span class="input-group-text bg-danger" id="basic-addon1">US$</span>
+                      </div>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text bg-danger" id="basic-addon1">N° Transacción</span><input class="form-control" type="text" value="6" aria-label="readonly input example" readonly>
+                      </div>
+                    </form>
+                    <hr>
+                    <h4 class="text-center">Nuevo pago</h4>
+                    <form class="row g-3" action="">
+                      <div class="input-group mb-3">
+                        <span class="input-group-text bg-danger" id="basic-addon1">Forma de pago</span>
+                        <select id="inputState" class="form-select">
+                          <option selected>Elegir pago...</option>
+                          <option>Transferencia</option>
+                          <option>Efectivo</option>
+                          <option>Crédito</option>
+                        </select>
+                      </div>
+
+                      <div class="input-group mb-3">
+                        <span class="input-group-text bg-danger" id="basic-addon2">Mes</span>
+                        <select name="" id="">
+                          <option selected value="">Seleccione el mes</option>
+                          <option value="">Enero</option>
+                          <option value="">Febrero</option>
+                          <option value="">Marzo</option>
+                          <option value="">Abril</option>
+                          <option value="">Mayo</option>
+                          <option value="">Junio</option>
+                          <option value="">Julio</option>
+                          <option value="">Agosto</option>
+                          <option value="">Septiembre</option>
+                          <option value="">Octubre</option>
+                          <option value="">Noviembre</option>
+                          <option value="">Diciembre</option>
+                        </select>
+                        <span class="input-group-text bg-danger" id="basic-addon2">Año</span>
+                        <select name="" id="">
+                          <option selected value="">Seleccione el año</option>
+                          <option value="">2019</option>
+                          <option value="">2020</option>
+                          <option value="">2021</option>
+                          <option value="">2022</option>
+                          <option value="">2023</option>
+                        </select>
+                      </div>
+                      
+                      <div class="input-group mb-3">
+                        <span class="input-group-text bg-danger">Total a pagar</span>
+                        <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+                        <span class="input-group-text bg-danger">
+                          <select class="form-select" id="bg-dang" name="" id="">
+                            <option selected value=""></option>
+                            <option value="">US$</option>
+                            <option value="">$</option>
+                            <option value="">EUR</option>
+                            <option value="">Yen</option>
+                          </select>
+                        </span>
+                      </div>
+                      <div class="col d-grid">
+                            <button id="add_button" type="submit" class="btn btn-lg"  data-bs-toggle="tooltip" title="Cambiar estado">AÑADIR PAGO</button>
+                      </div>
+                    </form>
+                    <br>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <br>
+          <br>
+          <h4>Caja de Ventas</h4>
+          <table class="table text-center">
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Forma de Pago</th>
+                    <th>Tipo de Venta</th>
+                    <th>ID Propiedad</th>
+                    <th>Total</th>
+                    <th>Moneda</th>
+                    <th>Comisión</th>
+                    <th>N° Transacción</th>
+                </tr>
+            </thead>
+            <tbody>                    
+                <tr class="concretadas">
+                    <td>dd/mm/aaaa</td>                        
+                    <td>Pago parcial</td>
+                    <td>Financiada</td>
+                    <td>#546484</td>
+                    <td>$64655,8</td>
+                    <td>US$</td>
+                    <td>13%</td>
+                    <td>1</td>
+                </tr>
+                <tr class="concretadas">
+                    <td>dd/mm/aaaa</td>                        
+                    <td>Pago parcial</td>
+                    <td>Financiada</td>
+                    <td>#546484</td>
+                    <td>$64655,8</td>
+                    <td>US$</td>
+                    <td>13%</td>
+                    <td>2</td>
+                </tr>
+                <tr class="concretadas">
+                    <td>dd/mm/aaaa</td>                        
+                    <td>Pago parcial</td>
+                    <td>Financiada</td>
+                    <td>#546484</td>
+                    <td>$64655,8</td>
+                    <td>US$</td>
+                    <td>13%</td>
+                    <td>3</td>
+                </tr>
+                <tr class="concretadas">
+                    <td>dd/mm/aaaa</td>                        
+                    <td>Pago parcial</td>
+                    <td>Financiada</td>
+                    <td>#546484</td>
+                    <td>$64655,8</td>
+                    <td>$</td>
+                    <td>13%</td>
+                    <td>4</td>
+                </tr>
+                <tr class="concretadas">
+                    <td>dd/mm/aaaa</td>                        
+                    <td>Pago parcial</td>
+                    <td>Financiada</td>
+                    <td>#546484</td>
+                    <td>$64655,8</td>
+                    <td>EUR</td>
+                    <td>13%</td>
+                    <td>5</td>
+                </tr>
+              
+            </tbody>
+          </table>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>
