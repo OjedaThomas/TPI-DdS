@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/agente.css">
+    <link rel="stylesheet" href="css/agenteAgenda.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Inmobiliaria Domus</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark position-relative" id="navbar">
+      <div class="container-fluid">
+        <a class="link-logo" role="button" href="jefaComerc.html"><img src="assets/logo_domus.png" alt="" width="45" height="30"></a>
+        <a class="navbar-brand" href="#">DOMUS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link active text-white" href="jefaComerc.html">Agenda</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown" href="#">Reportes</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="alquiler_reportes_comerc.html">Alquiler</a></li>
+                    <li><a class="dropdown-item" href="ventas_reportes_comerc.html">Ventas</a></li>
+                    <li><a class="dropdown-item" href="propiedades_reportes_comerc.html">Propiedades</a></li>
+                    <li><a class="dropdown-item " href="clientes_reportes_comerc.html">Clientes</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="archivoComerc.html">Archivo</a>
+            </li>
+
+              <!-- USUARIO -->
+              <li class="nav-item dropdown position-absolute end-0">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Jefa de Comercialización
+                    <img id="perfil_img_navbar" src="assets/adam_sandler.jpg" alt="">
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Ver perfil</a></li>
+                    <li><a class="dropdown-item" href="#">Modificar datos</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Cerrar sesion</a></li>
+                  </ul>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </nav>     
+    <div class="tab-content">
+      <div class="row">
+        <!-- CALENDARIO -->
+        <div id="calendar_container" class="calendar text-center col">
+            <div class="calendar__info row">
+                <div class="calendar__prev col" id="prev-month"><img class="button_img" id="calendar_prev" src="assets/left.png" alt=""></div>
+                <h1 class="calendar__month col" id="month"></h1>
+                <h1 class="calendar__year col" id="year"></h1>
+                <div class="calendar__next col" id="next-month"><img class="button_img" id="calendar_next" src="assets/right.png" alt=""></div>
+            </div>
+
+            <div class="calendar__week ">
+                <div class="calendar__day calendar__item">Lunes</div>
+                <div class="calendar__day calendar__item">Martes</div>
+                <div class="calendar__day calendar__item">Miercoles</div>
+                <div class="calendar__day calendar__item">Jueves</div>
+                <div class="calendar__day calendar__item">Viernes</div>
+                <div class="calendar__day calendar__item">Sabado</div>
+                <div class="calendar__day calendar__item">Domingo</div>
+            </div>
+
+            <div class="calendar__dates" id="dates"></div>
+        </div>
+
+        <!-- CONTENIDO SEGUN FECHA SELECCIONADA -->
+        <div id="day_selected_container" class="col date">
+            <!-- FECHA DEL DIA SELECCIONADO -->
+            <div class="row" id="fecha_container">
+                <div class="dateRight">
+                    <!-- NUMERO DE DIA -->
+                    <h1 id="dateNumber" class="" style="font-size: 70px;"></h1>
+                    <!-- MES Y AÑO -->
+                    <div class="" >
+                        <h3 id="dateMonth" style="font-size: 20px;"></h2>
+                        <h5 id="dateYear" style="font-size: 20px;"></h5>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="container-lg" id="add_task_container">
+              <hr>
+              <!-- CONTENEDOR DE FORMULARIO PARA NUEVA TAREA -->
+              <div class="main" >
+                <div class="center">  
+                  <h5>Actividades del día</h5>
+                  <table class="table">
+                    <thead>
+                      <th>Hora</th>
+                      <th>Agente encargado</th>
+                      <th>Nombre</th>
+                      <th>Telefono</th>
+                      <th>Actividad</th>
+                      <th>Estado</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>08:30</td>
+                        <td>Adam Sandler</td>
+                        <td>Juan Perez</td>
+                        <td>3624584503</td>
+                        <td>Visita</td>
+                        <td>Cancelado</td>
+                      </tr>
+                      <tr>
+                        <td>08:45</td>
+                        <td>Chuck Norris</td>
+                        <td>Juan Perez</td>
+                        <td>3624584503</td>
+                        <td>Visita</td>
+                        <td>Finalizado</td>
+                      </tr>
+                      <tr>
+                        <td>09:30</td>
+                        <td>Adam Sandler</td>
+                        <td>Juan Perez</td>
+                        <td>3624584503</td>
+                        <td>Visita Depto</td>
+                        <td>En proceso</td>
+                      </tr>
+                      <tr>
+                        <td>08:30</td>
+                        <td>Adam Sandler</td>
+                        <td>Juan Perez</td>
+                        <td>3624584503</td>
+                        <td>Visita cochera</td>
+                        <td>En proceso</td>
+                      </tr>
+                      <tr>
+                        <td>10:30</td>
+                        <td>Adam Sandler</td>
+                        <td>Juan Perez</td>
+                        <td>3624584503</td>
+                        <td>Visita Chalet</td>
+                        <td>Cancelada</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              
+            </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/calendario.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>

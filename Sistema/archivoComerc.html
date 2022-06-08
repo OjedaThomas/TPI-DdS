@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/agente.css">
+    <link rel="stylesheet" href="css/agenteAgenda.css">
+    <link rel="stylesheet" href="css/jefaComerc.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Inmobiliaria Domus</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark position-relative" id="navbar">
+      <div class="container-fluid">
+        <a class="link-logo" role="button" href="jefaComerc.html"><img src="assets/logo_domus.png" alt="" width="45" height="30"></a>
+        <a class="navbar-brand" href="#">DOMUS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link text-white" href="jefaComerc.html">Agenda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown" href="#">Reportes</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item " href="alquiler_reportes_comerc.html">Alquiler</a></li>
+                    <li><a class="dropdown-item " href="ventas_reportes_comerc.html">Ventas</a></li>
+                    <li><a class="dropdown-item " href="propiedades_reportes_comerc.html">Propiedades</a></li>
+                    <li><a class="dropdown-item " href="clientes_reportes_comerc.html">Clientes</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="archivoComerc.html">Archivo</a>
+              </li>
+
+              <!-- USUARIO -->
+              <li class="nav-item dropdown position-absolute end-0">
+                  <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Jefa de Comercialización
+                    <img id="perfil_img_navbar" src="assets/adam_sandler.jpg" alt="">
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Ver perfil</a></li>
+                    <li><a class="dropdown-item" href="#">Modificar datos</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Cerrar sesion</a></li>
+                  </ul>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </nav>     
+    <div class="tab-content container-margin row">
+      <h4 class="text-center">Archivo</h4>
+      <ul class="nav flex-column col-2 botones">
+        <li class="nav-item">
+          <button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExampleD" aria-expanded="false" aria-controls="collapseWidthExample">
+            Propiedades
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExampleM" aria-expanded="false" aria-controls="collapseWidthExample">
+            Clientes
+          </button>
+        </li>
+      </ul>
+      <section class="col-10">
+        <div class="collapse collapse-horizontal" id="collapseWidthExampleD" id="colapsado">
+            <div class="card card-body tablas">
+                <table class="table">
+                    <h6 class="text-center">Propiedades Disponibles</h6>
+                    <thead>
+                      <tr class="datos">
+                        <th>Fecha</th>
+                        <th>Id Propiedad</th>
+                        <th>Tipo</th>
+                        <th>Disponible</th>		    
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="datos">
+                        <td>dd/mm/aaaa</td>
+                        <td>#234234</td>
+                        <td>Casa</td>  
+                        <td>Si</td>
+                      </tr>
+                      <tr class="datos">
+                        <td>dd/mm/aaaa</td>
+                        <td>#234234</td>
+                        <td>Departamento</td>  
+                        <td>No</td>
+                      </tr>
+                    </tbody>
+                </table>
+                <br>
+                <table class="table">
+                    <h6 class="text-center">Propiedades Vendidas</h6>
+                    <thead>
+                      <tr class="datos">
+                        <th>Fecha</th>
+                        <th>Id Propiedad</th>
+                        <th>Propietario</th>
+                        <th>Monto</th>
+                        <th>Pago</th>		    
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="datos">
+                        <td>dd/mm/aaaa</td>
+                        <td>#234234</td>
+                        <td>MichaelJordam</td>  
+                        <td>549879546</td>
+                        <td>Total</td>
+                      </tr>
+                      <tr class="datos">
+                        <td>dd/mm/aaaa</td>
+                        <td>#234234</td>
+                        <td>MichaelJordam</td>  
+                        <td>549879546</td>
+                        <td>Financiado</td>
+                      </tr>
+                    </tbody>
+                </table>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button type="button" class="btn btn-outline-danger">VER HISTORICO</button>
+                </div>
+            </div>
+        </div>
+        <div class="collapse collapse-horizontal" id="collapseWidthExampleM">
+            <div class="card card-body tablas">
+                <table class="table">
+                    <h6 class="text-center">Clientes Actuales</h6>
+                    <thead>
+                      <tr class="datos">
+                        <th>Fecha</th>
+                        <th>Id Cliente</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Teléfono</th>
+                        <th>Email</th>		    
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="datos">
+                        <td>dd/mm/aaaa</td>
+                        <td>#234234</td>
+                        <td>Juan</td>  
+                        <td>Perez</td>
+                        <td>3624584503</td>
+                        <td>email@gmail.com</td>
+                      </tr>
+                      <tr class="datos">
+                        <td>dd/mm/aaaa</td>
+                        <td>#234234</td>
+                        <td>Juan</td>  
+                        <td>Perez</td>
+                        <td>3624584503</td>
+                        <td>email@gmail.com</td>
+                      </tr>
+                    </tbody>
+                </table>
+                <br>
+                <table class="table">
+                    <h6 class="text-center">Clientes Antiguos</h6>
+                    <thead>
+                      <tr class="datos">
+                        <th>Fecha</th>
+                        <th>Id Cliente</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Teléfono</th>
+                        <th>Email</th>		    
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="datos">
+                        <td>dd/mm/aaaa</td>
+                        <td>#234234</td>
+                        <td>Juan</td>  
+                        <td>Perez</td>
+                        <td>3624584503</td>
+                        <td>email@gmail.com</td>
+                      </tr>
+                      <tr class="datos">
+                        <td>dd/mm/aaaa</td>
+                        <td>#234234</td>
+                        <td>Juan</td>  
+                        <td>Perez</td>
+                        <td>3624584503</td>
+                        <td>email@gmail.com</td>
+                      </tr>
+                    </tbody>
+                </table>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button type="button" class="btn btn-outline-danger">VER HISTORICO</button>
+                </div>
+            </div>
+        </div>
+      </section>
+    </div>
+    <script src="js/agente.js"></script>
+    <script src="js/calendario.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>
