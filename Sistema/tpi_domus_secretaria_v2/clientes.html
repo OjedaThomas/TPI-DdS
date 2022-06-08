@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles_calendario.css">
+    <link rel="stylesheet" href="styles_tareas.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;900&display=swap" rel="stylesheet">
+
+    <title>Calendario Interactivo</title>
+</head>
+<body id="body">
+    <!-- BARRA DE NAVEGACION -->
+    <nav id="navbar" class="navbar navbar-expand-lg position-relative navbar-dark">
+        <div class="container-fluid">
+            <!-- <a class="navbar-brand" href="#">DOMUS</a>-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item position-relative">
+                    <img id="campana" class="button_img dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" src="img/campana.png" alt="">                    
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    2
+                    </span>
+                    <ul class="dropdown-menu dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                        <li><a class="dropdown-item" href="#">
+                            <b>Contacto:</b> ramon_valdez@gmail.com <br>
+                            <b>Mensaje: </b> Bueos dias, necesito visitar un domicilio
+                        </a></li>
+                        <li><a class="dropdown-item" href="#">
+                            <b>Contacto:</b> BADBUNNY_PERRO@gmail.com <br>
+                            <b>Mensaje: </b> bUENAS noChes quiEro COMprar un Depa
+                        </a></li>
+                        <li><a class="dropdown-item" href="#">
+                            <b>Contacto:</b> Gustavo_cerati@gmail.com <br>
+                            <b>Mensaje: </b> Hola, quiero poner una propiedad en alquiler
+                        </a></li>
+                        <li><a class="dropdown-item" href="#">
+                            <b>Contacto:</b> 355667881 <br>
+                            <b>Mensaje: </b> que onda ñeri, quiero comprar una casa
+                        </a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="calendario.html">Calendario</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="propiedades.html">Propiedades</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Clientes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="agentes.html">Agentes</a>
+                </li>
+
+                <!-- USUARIO -->
+                <li class="nav-item dropdown position-absolute end-0">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Adam Sandler
+                    </a>
+                    
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Ver perfil</a></li>
+                    <li><a class="dropdown-item" href="#">Modificar datos</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="login.html">Cerrar sesion</a></li>
+                    </ul>
+                </li>
+                
+                </ul>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENEDOR DE LISTA DE TAREAS -->
+    <div class="container-xxl">
+        <!-- AGREGAR CLIENTE -->
+        <div id="add_task_container" class="row">
+            <form class="row g-3" action="">
+                <div class="col-auto">
+                    <input type="text" class="form-control" placeholder="Nombre" aria-label="First name">
+                </div>
+                <div class="col-auto">
+                    <input type="text" class="form-control" placeholder="Contcto" aria-label="Last name">
+                </div>
+                <div class="col">
+                    <button id="add_button"  type="submit" class="btn"  data-bs-toggle="tooltip" title="Cambiar estado"><b>+</b></button>
+                </div>
+            </form>
+        </div>
+        <!-- FILTROS -->
+        <form class="row g-3" action="" style="margin: 10px;">            
+            <div class="col-auto">
+                <div class="input-group">                  
+                    <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Buscar...">
+                    <button id="search_button" class="btn btn-outline-success input-group-text" type="submit">
+                        <img class="button_img" id="search" src="img/search.png" alt="">
+                    </button>
+                </div>
+            </div>
+        </form>
+        
+        <!-- TABLA -->
+        <table class="table text-center">
+            <thead>
+                <tr>
+                    <th>Codigo cliente</th>
+                    <th>Nombre</th>
+                    <th>Contacto</th>
+                </tr>
+            </thead>
+            <tbody>                    
+                <tr>
+                    <td>#897A76</td>
+                    <td>Peter Parker</td>
+                    <td>hombre_aracnido@gmail.com / 88994432423</td>
+                    <td>
+                        <img class="button_img" src="img/settings.png" alt="">
+                        <img class="button_img" src="img/eliminar.png" alt="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>#235325</td>
+                    <td>Paulo Londra</td>
+                    <td>big-ligas@gmail.com</td>
+                    <td>
+                        <img class="button_img" src="img/settings.png" alt="">
+                        <img class="button_img" src="img/eliminar.png" alt="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>#234234</td>
+                    <td>Ramon Valdez</td>
+                    <td>rammm@gmail.com</td>
+                    <td>
+                        <img class="button_img" src="img/settings.png" alt="">
+                        <img class="button_img" src="img/eliminar.png" alt="">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+   
+    
+        
+    
+    
+
+
+    <script src="scripts_propiedades.js"></script>
+    <script src="scripts_propiedades.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
